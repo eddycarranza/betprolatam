@@ -744,73 +744,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 
-<!-- ANALIZADOR IA -->
-<section class="pronosticos-section" id="pronosticos">
-  <div class="sec-wrap">
-    <div class="sec-header">
-      <span>🤖</span>
-      <h2>Analizador de Partidos con IA</h2>
-      <div class="sec-line"></div>
-      <span class="sec-tag">Powered by IA</span>
-    </div>
 
-    <div class="ia-widget">
-      <div class="ia-intro">
-        <p>Escribe cualquier partido y nuestra IA analiza los mercados más inteligentes para apostar. Basado en estadísticas históricas, forma reciente y contexto del partido.</p>
-      </div>
-
-      <div class="ia-form">
-        <div class="ia-inputs">
-          <div class="ia-field">
-            <label>Equipo Local</label>
-            <input type="text" id="ia-local" placeholder="ej: Alianza Lima, Barcelona, PSG..." autocomplete="off">
-          </div>
-          <div class="ia-vs-sep">VS</div>
-          <div class="ia-field">
-            <label>Equipo Visitante</label>
-            <input type="text" id="ia-visita" placeholder="ej: Universitario, Real Madrid..." autocomplete="off">
-          </div>
-          <div class="ia-field ia-field-liga">
-            <label>Liga / Competición</label>
-            <input type="text" id="ia-liga" placeholder="ej: Liga 1 Perú, LaLiga, Champions..." autocomplete="off">
-          </div>
-        </div>
-        <div class="ia-extras">
-          <div class="ia-field">
-            <label>Contexto adicional (opcional)</label>
-            <input type="text" id="ia-contexto" placeholder="ej: partido de vuelta, local necesita ganar, lluvia..." autocomplete="off">
-          </div>
-        </div>
-        <button class="ia-btn" id="ia-btn" onclick="analizarPartido()">
-          <span class="ia-btn-icon">🔮</span>
-          <span id="ia-btn-txt">Analizar con IA</span>
-        </button>
-      </div>
-
-      <div class="ia-resultado" id="ia-resultado" style="display:none;">
-        <div class="ia-res-header">
-          <span class="ia-res-badge">🤖 Análisis IA</span>
-          <span class="ia-res-partido" id="ia-res-partido"></span>
-        </div>
-        <div class="ia-res-body" id="ia-res-body"></div>
-      </div>
-
-      <div class="ia-loading" id="ia-loading" style="display:none;">
-        <div class="ia-dots"><span></span><span></span><span></span></div>
-        <p>Analizando el partido...</p>
-      </div>
-
-      <div class="ia-ejemplos">
-        <span class="ia-ej-label">Prueba con:</span>
-        <button class="ia-ej-btn" onclick="ejemploRapido('Alianza Lima','Universitario','Liga 1 Perú')">Alianza vs. Universitario</button>
-        <button class="ia-ej-btn" onclick="ejemploRapido('Real Madrid','Barcelona','LaLiga')">Real Madrid vs. Barcelona</button>
-        <button class="ia-ej-btn" onclick="ejemploRapido('Bayern Munich','Borussia Dortmund','Bundesliga')">Bayern vs. Dortmund</button>
-      </div>
-
-      <div class="prono-aviso">⚠️ <strong>Aviso:</strong> El análisis de IA es educativo y está basado en conocimiento estadístico general. No garantiza ningún resultado. Apuesta siempre de forma responsable. Solo mayores de 18 años.</div>
-    </div>
-  </div>
-</section>
 
 <!-- GLOSARIO -->
 <section class="glosario-section" id="glosario">
