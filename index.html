@@ -613,4 +613,10 @@ const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
 },{threshold:.07});
 document.querySelectorAll('.blog-card,.mercado-card,.why-card,.casa-item').forEach((el,i)=>{
-  el.style.opacity='0';el.style.transfor
+  el.style.opacity='0';el.style.transform='translateY(22px)';
+  el.style.transition=`opacity .5s ease ${i*.07}s,transform .5s ease ${i*.07}s`;
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
