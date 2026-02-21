@@ -433,7 +433,7 @@ footer{background:var(--fondo2);border-top:1px solid var(--borde);padding:3rem 2
   <div class="modal" id="modal-content"></div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const GUIAS = {
   '1x2':{titulo:'1X2 — Resultado Final',sub:'El mercado más popular del fútbol, explicado desde cero',contenido:`
     <div class="g-intro"><strong>¿Qué es el 1X2?</strong> Es la apuesta más básica. El <strong>1</strong> representa victoria local, la <strong>X</strong> el empate, y el <strong>2</strong> la victoria visitante. Solo eliges una opción y apuestas a que ocurra al final de los 90 minutos.</div>
@@ -442,155 +442,143 @@ const GUIAS = {
     <div class="g-h3">Ejemplos reales</div>
     <div class="ejs">
       <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta al Local (1)</span><span class="ej-res rg">✓ GANA</span></div><p><strong>Barcelona vs Getafe</strong> · Cuota 1: 1.55<br>Apuestas S/ 100. Barcelona gana 2-0.<br><strong>Cobras S/ 155 → ganancia neta S/ 55</strong></p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta al Empate (X)</span><span class="ej-res rp">✗ PIERDE</span></div><p><strong>Real Madrid vs Atlético</strong> · Cuota X: 3.40<br>Apuestas S/ 50 al empate. Real Madrid gana 1-0.<br><strong>Pierdes los S/ 50</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta al Empate (X)</span><span class="ej-res rp">✗ PIERDE</span></div><p><strong>Real Madrid vs Atlético</strong> · Cuota X: 3.40<br>Apuestas S/ 50. Real Madrid gana 1-0.<br><strong>Pierdes los S/ 50</strong></p></div>
       <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta al Visitante (2)</span><span class="ej-res rg">✓ GANA</span></div><p><strong>Alianza Lima vs Universitario</strong> · Cuota 2: 2.80<br>Apuestas S/ 30. Universitario gana 1-2.<br><strong>Cobras S/ 84 → ganancia neta S/ 54</strong></p></div>
     </div>
-    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>Evita apostar al favorito claro con cuota menor a 1.30 — la ventaja matemática de la casa te perjudica mucho en esos rangos. El punto óptimo de relación riesgo/cuota está entre 1.40 y 1.75.</p></div>
+    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>Evita apostar al favorito claro con cuota menor a 1.30. El punto óptimo de relación riesgo/cuota está entre 1.40 y 1.75.</p></div>
     <div class="g-h3">¿Cuándo apostar al local?</div>
-    <div class="g-p">✅ El equipo local tiene buena racha en casa y necesita ganar.<br>✅ El visitante llega en mal momento o con bajas importantes.<br>✅ Hay diferencia clara de calidad entre ambos equipos.<br>❌ Evita en clásicos muy igualados o partidos sin motivación para el local.</div>`},
+    <div class="g-p">✅ El equipo local tiene buena racha en casa y necesita ganar.<br>✅ El visitante llega en mal momento o con bajas importantes.<br>❌ Evita en clásicos muy igualados o partidos sin motivación para el local.</div>`},
 
   'over-under':{titulo:'Over / Under Goles',sub:'El mercado de goles totales más popular del mundo',contenido:`
-    <div class="g-intro"><strong>¿Qué es?</strong> Apuestas al <strong>total de goles</strong> en un partido. <strong>Over 2.5</strong> = necesitas 3 o más goles para ganar. <strong>Under 2.5</strong> = necesitas 2 o menos goles. El número nunca es entero (1.5, 2.5, 3.5) para evitar empates técnicos.</div>
+    <div class="g-intro"><strong>¿Qué es?</strong> Apuestas al <strong>total de goles</strong> en un partido. <strong>Over 2.5</strong> = necesitas 3 o más goles para ganar. <strong>Under 2.5</strong> = necesitas 2 o menos goles. El número nunca es entero para evitar empates técnicos.</div>
     <div class="g-h3">Las líneas más comunes</div>
     <div class="g-p"><strong>Over/Under 1.5</strong> — Solo necesitas 2 goles. Muy seguro, cuota baja (1.20-1.40).<br><strong>Over/Under 2.5</strong> — El más popular del mundo. Necesitas 3+ goles. Cuota habitual 1.70-1.95.<br><strong>Over/Under 3.5</strong> — Necesitas 4+ goles. Cuota más alta, más arriesgado.</div>
     <div class="g-h3">Ejemplos reales</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Over 2.5 Goles</span><span class="ej-res rg">✓ GANA con 3 o más goles</span></div><p><strong>Bayern Munich vs Dortmund</strong> · Cuota Over 2.5: 1.72<br>Resultado 3-1 = 4 goles totales → 4 > 2.5 ✅<br><strong>Apuestas S/ 100 → Cobras S/ 172</strong></p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Under 2.5 Goles</span><span class="ej-res rg">✓ GANA con 0, 1 o 2 goles</span></div><p><strong>Juventus vs Atlético</strong> · Cuota Under 2.5: 2.10<br>Resultado 1-0 = 1 gol total → 1 < 2.5 ✅<br><strong>Apuestas S/ 50 → Cobras S/ 105</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Over 2.5 Goles</span><span class="ej-res rg">✓ GANA con 3 o más goles</span></div><p><strong>Bayern vs Dortmund</strong> · Cuota 1.72<br>Resultado 3-1 = 4 goles → 4 > 2.5 ✅<br><strong>Apuestas S/ 100 → Cobras S/ 172</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Under 2.5 Goles</span><span class="ej-res rg">✓ GANA con 0, 1 o 2 goles</span></div><p><strong>Juventus vs Atlético</strong> · Cuota 2.10<br>Resultado 1-0 = 1 gol → 1 menor que 2.5 ✅<br><strong>Apuestas S/ 50 → Cobras S/ 105</strong></p></div>
     </div>
     <div class="g-h3">¿Cuándo elegir Over?</div>
-    <div class="g-p">✅ Ambos equipos promedian más de 2.5 goles por partido en casa y visita.<br>✅ Un equipo necesita ganar por goleada (remontada en global).<br>✅ El portero titular está lesionado o suspendido.<br>✅ Historial de muchos goles entre estos dos equipos.</div>
+    <div class="g-p">✅ Ambos equipos promedian más de 2.5 goles por partido.<br>✅ Un equipo necesita ganar por goleada.<br>✅ El portero titular está lesionado.<br>✅ Historial de muchos goles entre estos dos equipos.</div>
     <div class="g-h3">¿Cuándo elegir Under?</div>
-    <div class="g-p">✅ Partidos de eliminatoria en fases avanzadas (ambos juegan conservador).<br>✅ Equipos muy defensivos como Atlético Madrid de visitante.<br>✅ Mal tiempo — lluvia y viento reducen goles y efectividad.<br>✅ Partidos sin motivación real (ambos ya clasificados o ya descendidos).</div>
-    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>Revisa los últimos 5 partidos de cada equipo POR SEPARADO como local y visitante. Si el local promedia más de 1.5 goles en casa y el visitante encaja más de 1 por partido fuera, el Over 2.5 tiene base estadística sólida.</p></div>`},
+    <div class="g-p">✅ Partidos de eliminatoria en fases avanzadas.<br>✅ Equipos muy defensivos de visitante.<br>✅ Mal tiempo — lluvia y viento reducen goles.<br>✅ Partidos sin motivación real.</div>
+    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>Revisa los últimos 5 partidos de cada equipo por separado como local y visitante antes de elegir Over o Under.</p></div>`},
 
   'btts':{titulo:'BTTS — Both Teams To Score',sub:'Ambos equipos marcan: guía con estadísticas reales',contenido:`
-    <div class="g-intro"><strong>¿Qué es BTTS?</strong> "Both Teams To Score" — Ambos equipos marcan. Apuestas a que <strong>los dos equipos anotarán al menos un gol</strong> cada uno en el partido. No importa el marcador final ni el total de goles, solo que ambos marquen.</div>
+    <div class="g-intro"><strong>¿Qué es BTTS?</strong> Ambos equipos marcan. Apuestas a que <strong>los dos equipos anotarán al menos un gol</strong> cada uno. No importa el marcador final, solo que ambos marquen.</div>
     <div class="g-h3">Las dos opciones</div>
     <div class="g-p"><strong>BTTS Sí:</strong> Ambos equipos marcan al menos 1 gol. Cuota habitual: 1.65-1.90.<br><strong>BTTS No:</strong> Uno o ningún equipo marca. Cuota habitual: 1.80-2.20.</div>
     <div class="g-h3">Ejemplos reales</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">BTTS Sí</span><span class="ej-res rg">✓ GANA</span></div><p><strong>Arsenal vs Chelsea</strong> · Cuota BTTS Sí: 1.75<br>Resultado 2-1 → Arsenal marcó ✅ · Chelsea marcó ✅<br><strong>Apuestas S/ 100 → Cobras S/ 175</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">BTTS Sí</span><span class="ej-res rg">✓ GANA</span></div><p><strong>Arsenal vs Chelsea</strong> · Cuota 1.75<br>Resultado 2-1 → Arsenal marcó ✅ · Chelsea marcó ✅<br><strong>Apuestas S/ 100 → Cobras S/ 175</strong></p></div>
       <div class="ej"><div class="ej-h"><span class="ej-tipo">BTTS Sí — Solo marca uno</span><span class="ej-res rp">✗ PIERDE</span></div><p><strong>Liverpool vs Wolves</strong> · Resultado 3-0<br>Liverpool marcó ✅ pero Wolves NO marcó ❌<br><strong>BTTS Sí pierde aunque Liverpool haya goleado</strong></p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">BTTS No</span><span class="ej-res rg">✓ GANA</span></div><p><strong>Juventus vs Nápoles</strong> · Resultado 1-0<br>Solo Juventus marcó → ✅ No marcaron ambos.<br><strong>Apuestas S/ 50 → Cobras S/ 100</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">BTTS No</span><span class="ej-res rg">✓ GANA</span></div><p><strong>Juventus vs Nápoles</strong> · Resultado 1-0<br>Solo Juventus marcó ✅<br><strong>Apuestas S/ 50 → Cobras S/ 100</strong></p></div>
     </div>
-    <div class="g-h3">% histórico de BTTS Sí por liga</div>
-    <div class="g-p">🇳🇱 <strong>Eredivisie:</strong> ~62% — La más alta de Europa<br>🇩🇪 <strong>Bundesliga:</strong> ~58%<br>🏴󠁧󠁢󠁥󠁮󠁧󠁿 <strong>Premier League:</strong> ~55-60%<br>🇧🇷 <strong>Brasileirao:</strong> ~52%<br>🇪🇸 <strong>LaLiga:</strong> ~48%<br>🇮🇹 <strong>Serie A:</strong> ~44% — La más defensiva</div>
-    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>El BTTS Sí combinado con Over 2.5 en una apuesta combinada entre equipos muy ofensivos (ambos promedian más de 1.5 goles) puede darte cuotas de 2.50-3.50 con probabilidad razonable en Bundesliga o Premier League.</p></div>`},
+    <div class="g-h3">% histórico BTTS Sí por liga</div>
+    <div class="g-p">🇳🇱 <strong>Eredivisie:</strong> ~62%<br>🇩🇪 <strong>Bundesliga:</strong> ~58%<br>🏴󠁧󠁢󠁥󠁮󠁧󠁿 <strong>Premier League:</strong> ~55-60%<br>🇧🇷 <strong>Brasileirao:</strong> ~52%<br>🇪🇸 <strong>LaLiga:</strong> ~48%<br>🇮🇹 <strong>Serie A:</strong> ~44%</div>
+    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>BTTS Sí combinado con Over 2.5 entre equipos muy ofensivos puede darte cuotas de 2.50-3.50 con buena probabilidad en Bundesliga o Premier League.</p></div>`},
 
   'handicap-asiatico':{titulo:'Handicap Asiático',sub:'El mercado favorito de los apostadores profesionales',contenido:`
-    <div class="g-intro"><strong>¿Qué es?</strong> El Handicap Asiático <strong>elimina el empate</strong> dando ventaja o desventaja de goles a cada equipo antes de empezar. Si el resultado ajustado termina en empate exacto, <strong>la apuesta se devuelve íntegra</strong>. Solo hay dos opciones posibles.</div>
+    <div class="g-intro"><strong>¿Qué es?</strong> El Handicap Asiático <strong>elimina el empate</strong> dando ventaja o desventaja de goles. Si el resultado ajustado termina en empate, <strong>la apuesta se devuelve íntegra</strong>. Solo hay dos opciones posibles.</div>
     <div class="g-h3">Handicap de medio: -0.5 / +0.5</div>
-    <div class="g-p">El más sencillo. No existe posibilidad de devolución. Con <strong>-0.5</strong> el equipo debe ganar el partido. Con <strong>+0.5</strong> el equipo gana si empata o gana el partido.</div>
     <div class="ejs">
       <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -0.5</span><span class="ej-res rg">✓ GANA solo si gana el partido</span></div><p>Apuestas a <strong>Barcelona -0.5</strong>. Barcelona gana 1-0 → ✅ Ganas.<br>Si empata o pierde → ❌ Pierdes todo.</p></div>
       <div class="ej"><div class="ej-h"><span class="ej-tipo">Visitante +0.5</span><span class="ej-res rg">✓ GANA si empata o gana</span></div><p>Apuestas a <strong>Betis +0.5</strong> vs Barcelona. Betis empata 1-1 → ✅ Ganas.<br>Solo pierdes si Betis pierde por cualquier marcador.</p></div>
     </div>
     <div class="g-h3">Handicap entero: -1 / +1</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -1 · gana por 2 o más</span><span class="ej-res rg">✓ GANA</span></div><p><strong>City -1</strong> vs Brighton.<br>City gana 3-1 → Ajustado 2-1 → ✅ Ganas.<br>City gana 2-1 → Ajustado 1-1 → <span class="rd">↩ SE DEVUELVE</span>.<br>City gana 1-0 → Ajustado 0-0 → <span class="rd">↩ SE DEVUELVE</span>.<br>City pierde → ❌ Pierdes.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Visitante +1 · cubierto por 1 gol</span><span class="ej-res rg">✓ GANA si no pierde por 2+</span></div><p><strong>Brighton +1</strong> vs City. City gana 1-0 → Ajustado empate → <span class="rd">↩ SE DEVUELVE</span>.<br>City gana 3-1 → Brighton pierde ajustado → ❌ Pierdes.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -1</span><span class="ej-res rg">✓ GANA si gana por 2 o más</span></div><p><strong>City -1</strong> vs Brighton.<br>City gana 3-1 → Ajustado 2-1 → ✅ Ganas.<br>City gana 2-1 → Ajustado 1-1 → <span class="rd">↩ SE DEVUELVE</span>.<br>City pierde → ❌ Pierdes.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Visitante +1</span><span class="ej-res rg">✓ GANA si no pierde por 2+</span></div><p><strong>Brighton +1</strong> vs City. City gana 1-0 → Ajustado empate → <span class="rd">↩ SE DEVUELVE</span>.<br>City gana 3-1 → ❌ Pierdes.</p></div>
     </div>
-    <div class="g-h3">Handicap de cuarto: -0.25 / -0.75</div>
-    <div class="g-p"><strong>Divide tu apuesta en dos mitades.</strong> Apostar <strong>-0.75</strong> = mitad en -0.5 y mitad en -1. Puedes ganar o perder "a medias" según el resultado.</div>
+    <div class="g-h3">Handicap de cuarto: -0.75</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -0.75 · gana por 1 gol exacto</span><span class="ej-res rd">½ Gana / ½ Devuelve</span></div><p>Apuestas S/ 100 a <strong>PSG -0.75</strong>. PSG gana 1-0.<br>Mitad (-0.5) → PSG ganó → ✅ esa mitad gana.<br>Mitad (-1) → resultado ajustado es empate → ↩ esa mitad se devuelve.<br><strong>Recibes la ganancia de S/ 50 + los S/ 50 devueltos.</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -0.75 con victoria por 1 gol</span><span class="ej-res rd">½ Gana / ½ Devuelve</span></div><p>Apuestas S/ 100 a <strong>PSG -0.75</strong>. PSG gana 1-0.<br>Mitad (-0.5) gana ✅ · Mitad (-1) se devuelve ↩<br><strong>Recibes ganancia de S/ 50 + S/ 50 devueltos.</strong></p></div>
     </div>
-    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>El Handicap Asiático reduce la ventaja matemática de la casa casi a la mitad comparado con el 1X2. Cuando el favorito tiene cuota 1X2 de 1.20-1.30, busca el mismo equipo con -0.5 asiático — obtendrás mejor cuota con riesgo similar.</p></div>`},
+    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>Si el favorito tiene cuota 1X2 de 1.20-1.30, busca el mismo equipo con -0.5 asiático para obtener mejor cuota con riesgo similar.</p></div>`},
 
   'handicap-europeo':{titulo:'Hándicap Europeo',sub:'Ventajas de goles que incluyen el empate',contenido:`
-    <div class="g-intro"><strong>¿Qué es?</strong> Similar al asiático pero con una diferencia clave: <strong>incluye el empate como resultado posible</strong>. Se da ventaja o desventaja de goles enteros (+1, -1, +2, -2). Hay tres resultados posibles. Si el resultado ajustado termina en empate y no apostaste al empate, <strong>pierdes la apuesta — no se devuelve</strong>.</div>
-    <div class="g-h3">Cómo funciona el +1 y -1</div>
-    <div class="g-p">Cuando apuestas a un equipo con <strong>+1</strong>, ese equipo comienza con 1 gol de ventaja virtual. Para que pierdas, el otro equipo tiene que ganar por 2 o más goles. Si gana por exacto 1 gol, el resultado ajustado es <strong>empate</strong>.</div>
+    <div class="g-intro"><strong>¿Qué es?</strong> Similar al asiático pero <strong>incluye el empate como resultado posible</strong>. Se dan ventajas de goles enteros (+1, -1). Hay tres resultados posibles. Si el resultado ajustado es empate y no apostaste a eso, <strong>pierdes — no se devuelve</strong>.</div>
     <div class="g-h3">Ejemplos reales</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Visitante +1 · empieza ganando 0-1</span><span class="ej-res rg">✓ GANA si local no gana por 2+</span></div><p><strong>Real Madrid vs Celta</strong> · Apostaste a <strong>Celta +1</strong> (gana ajustado).<br>Real Madrid gana 1-0 → Ajustado: 1-1 → <strong>Empate ajustado</strong> → Celta +1 pierde si apostaste a que Celta ganara.<br>Real Madrid gana 2-0 → Ajustado 2-1 → ❌ Celta pierde ajustado.<br>Real Madrid gana 0-1 → ✅ Celta gana directamente.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -1 · debe ganar por 2+</span><span class="ej-res rg">✓ GANA con diferencia de 2+</span></div><p><strong>PSG -1</strong> vs Auxerre.<br>PSG gana 3-0 → Ajustado 2-0 → ✅ PSG gana ajustado.<br>PSG gana 1-0 → Ajustado 0-0 → Empate ajustado → ❌ Pierdes.<br>PSG gana 2-1 → Ajustado 1-1 → Empate ajustado → ❌ Pierdes.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Local -1 · debe ganar por 2+</span><span class="ej-res rg">✓ GANA con diferencia de 2+</span></div><p><strong>PSG -1</strong> vs Auxerre.<br>PSG gana 3-0 → Ajustado 2-0 → ✅ Ganas.<br>PSG gana 1-0 → Ajustado 0-0 → Empate ajustado → ❌ Pierdes.<br>PSG gana 2-1 → Ajustado 1-1 → Empate ajustado → ❌ Pierdes.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Visitante +1 · empieza ganando</span><span class="ej-res rg">✓ GANA si local no gana por 2+</span></div><p><strong>Celta +1</strong> vs Real Madrid.<br>Real Madrid gana 1-0 → Ajustado 1-1 → Empate ajustado → depende de tu elección.<br>Real Madrid gana 2-0 → Ajustado 2-1 → ❌ Celta pierde ajustado.</p></div>
     </div>
     <div class="g-h3">Diferencia clave vs Handicap Asiático</div>
-    <div class="g-p"><strong>Hándicap Europeo:</strong> 3 resultados · NO devuelve en empate ajustado · mayor riesgo · cuota más alta.<br><strong>Hándicap Asiático:</strong> 2 resultados · SÍ devuelve en empate ajustado · menor riesgo · cuota más baja.</div>
-    <div class="tip"><div class="tip-lbl">💡 Cuándo usar Europeo vs Asiático</div><p>Usa el Europeo si confías en que el favorito ganará cómodamente por 2+ goles. Si no tienes tanta certeza, el Asiático es más seguro porque al menos te devuelve la apuesta si gana por exactamente 1.</p></div>`},
+    <div class="g-p"><strong>Europeo:</strong> 3 resultados · NO devuelve · mayor riesgo · cuota más alta.<br><strong>Asiático:</strong> 2 resultados · SÍ devuelve en empate · menor riesgo · cuota más baja.</div>
+    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>Usa el Europeo solo si confías en que el favorito ganará por 2+ goles. Si tienes dudas, el Asiático es más seguro.</p></div>`},
 
   'bankroll':{titulo:'Bankroll Management',sub:'La regla del 2-5% que protege tu capital a largo plazo',contenido:`
-    <div class="g-intro"><strong>¿Qué es el Bankroll?</strong> Tu <strong>bankroll</strong> es el dinero que tienes destinado exclusivamente para apuestas. La gestión de bankroll es el conjunto de reglas que defines para <strong>nunca perder más de lo que puedes permitirte</strong> y mantenerte apostando a largo plazo.</div>
+    <div class="g-intro"><strong>¿Qué es el Bankroll?</strong> Tu <strong>bankroll</strong> es el dinero destinado exclusivamente a apuestas. La gestión de bankroll define reglas para <strong>nunca perder más de lo que puedes permitirte</strong> y mantenerte apostando a largo plazo.</div>
     <div class="g-h3">La regla del 2-5%</div>
-    <div class="g-p">La regla más importante del bankroll management dice que <strong>nunca debes apostar más del 2-5% de tu bankroll total en una sola apuesta</strong>. Si tienes S/ 200 para apostar, cada apuesta individual debería ser de S/ 4 a S/ 10 máximo.</div>
+    <div class="g-p"><strong>Nunca apuestes más del 2-5% de tu bankroll total en una sola apuesta.</strong> Si tienes S/ 200, cada apuesta debería ser de S/ 4 a S/ 10 máximo.</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Ejemplo correcto — Regla del 2%</span><span class="ej-res rg">✓ Gestión sana</span></div><p><strong>Bankroll total: S/ 300</strong><br>Apuesta por partido: 2% = S/ 6<br>Aunque pierdas 10 seguidas, solo pierdes S/ 60 (20% del total).<br><strong>Sigues vivo para recuperar.</strong></p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Ejemplo incorrecto — Sin gestión</span><span class="ej-res rp">✗ Error común</span></div><p><strong>Bankroll total: S/ 300</strong><br>Apuesta por partido: S/ 100 (33%)<br>Con 3 apuestas perdidas seguidas → <strong>bankroll a cero.</strong><br>Y las rachas de 3 pérdidas seguidas ocurren todo el tiempo.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Correcto — Regla del 2%</span><span class="ej-res rg">✓ Gestión sana</span></div><p><strong>Bankroll: S/ 300</strong> · Apuesta por partido: S/ 6 (2%)<br>Aunque pierdas 10 seguidas, solo pierdes S/ 60 (20% del total).<br><strong>Sigues vivo para recuperar.</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Incorrecto — Sin gestión</span><span class="ej-res rp">✗ Error común</span></div><p><strong>Bankroll: S/ 300</strong> · Apuesta por partido: S/ 100 (33%)<br>Con 3 pérdidas seguidas → <strong>bankroll a cero.</strong><br>Las rachas de 3 pérdidas seguidas ocurren todo el tiempo.</p></div>
     </div>
-    <div class="g-h3">¿Por qué el 2-5% y no más?</div>
-    <div class="g-p">Incluso el mejor apostador del mundo pierde entre el 40-45% de sus apuestas. Las rachas negativas de 5-8 pérdidas seguidas son completamente normales estadísticamente. Con el 2%, una racha de 8 pérdidas seguidas solo te cuesta el 16% del bankroll — sigues en pie. Con el 20% por apuesta, una racha de 4 pérdidas te destruye.</div>
-    <div class="g-h3">Tipos de gestión de bankroll</div>
+    <div class="g-h3">Tipos de gestión</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta plana — La más recomendada</span><span class="ej-res rg">Para principiantes</span></div><p>Siempre apuestas el mismo monto fijo (ej: S/ 10 por apuesta), sin importar qué tan seguro te sientas. Simple, controlada y la más usada por apostadores serios.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">% fijo del bankroll</span><span class="ej-res rg">Intermedio</span></div><p>Siempre apuestas el 2% del bankroll actual. Si creces, apuestas un poco más. Si bajas, apuestas menos. Se adapta automáticamente a tu situación.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Martingala — EVÍTALA</span><span class="ej-res rp">✗ Peligrosa</span></div><p>Doblar la apuesta después de cada pérdida para "recuperar". Parece lógica pero con una racha de 6 pérdidas y apuesta inicial de S/ 10: necesitas apostar S/ 640 en la séptima. <strong>Destruye bankrolls rápidamente.</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta plana — Recomendada</span><span class="ej-res rg">Para principiantes</span></div><p>Siempre el mismo monto fijo (ej: S/ 10 por apuesta). Simple, controlada y usada por apostadores serios.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Martingala — EVÍTALA</span><span class="ej-res rp">✗ Peligrosa</span></div><p>Doblar la apuesta tras cada pérdida. Con 6 pérdidas y apuesta inicial de S/ 10: necesitas S/ 640 en la séptima. <strong>Destruye bankrolls rápidamente.</strong></p></div>
     </div>
-    <div class="g-h3">Reglas básicas adicionales</div>
-    <div class="g-p">✅ <strong>Dinero separado:</strong> el bankroll nunca se mezcla con dinero de gastos del hogar, alimentación o alquiler.<br>✅ <strong>No persigas pérdidas:</strong> si pierdes S/ 50 en un día, no intentes recuperarlo ese mismo día apostando más.<br>✅ <strong>Lleva registro:</strong> anota cada apuesta (equipo, mercado, cuota, resultado). Sin datos no puedes mejorar.<br>✅ <strong>Límite diario:</strong> define cuánto puedes perder en un día y para cuando llegues a ese límite.</div>
-    <div class="tip"><div class="tip-lbl">💡 La verdad que nadie dice</div><p>El 95% de los apostadores pierde dinero a largo plazo. Los que sobreviven no son los que aciertan más — son los que <strong>gestionan mejor su capital</strong>. La disciplina vale más que el conocimiento de mercados.</p></div>`},
+    <div class="g-h3">Reglas básicas</div>
+    <div class="g-p">✅ El bankroll nunca se mezcla con dinero de gastos del hogar.<br>✅ Si pierdes S/ 50 en un día, no intentes recuperarlo ese mismo día.<br>✅ Anota cada apuesta (equipo, mercado, cuota, resultado).<br>✅ Define un límite diario de pérdida y respétalo.</div>
+    <div class="tip"><div class="tip-lbl">💡 La verdad que nadie dice</div><p>El 95% de los apostadores pierde a largo plazo. Los que sobreviven no aciertan más — <strong>gestionan mejor su capital</strong>. La disciplina vale más que el conocimiento de mercados.</p></div>`},
 
   'cuotas':{titulo:'¿Cómo Leer las Cuotas?',sub:'Decimales, americanas y fraccionales explicadas desde cero',contenido:`
-    <div class="g-intro"><strong>¿Qué es una cuota?</strong> La cuota (también llamada momio u odd) es el <strong>número que multiplica tu apuesta</strong> si aciertas. También refleja la probabilidad que la casa asigna a cada resultado. Saber leerlas es lo primero que debes aprender.</div>
-    <div class="g-h3">Formato Decimal — El más usado en Perú y Europa</div>
-    <div class="g-p">Es el formato más sencillo. La cuota ya incluye tu apuesta dentro del resultado. <strong>Lo que cobras = apuesta × cuota.</strong></div>
+    <div class="g-intro"><strong>¿Qué es una cuota?</strong> La cuota (también llamada momio u odd) es el <strong>número que multiplica tu apuesta</strong> si aciertas. También refleja la probabilidad que la casa asigna a cada resultado.</div>
+    <div class="g-h3">Formato Decimal — El más usado en Perú</div>
+    <div class="g-p"><strong>Lo que cobras = apuesta × cuota.</strong> La cuota incluye tu apuesta devuelta dentro del total.</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 2.00 — Apuesta S/ 100</span><span class="ej-res rg">✓ Cobras S/ 200</span></div><p>S/ 100 × 2.00 = S/ 200 en total → <strong>ganancia neta S/ 100</strong><br>Una cuota de 2.00 significa que la casa estima un 50% de probabilidad.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 1.50 — Apuesta S/ 100</span><span class="ej-res rg">✓ Cobras S/ 150</span></div><p>S/ 100 × 1.50 = S/ 150 en total → <strong>ganancia neta S/ 50</strong><br>Cuota baja = resultado muy probable según la casa.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 3.40 — Apuesta S/ 50</span><span class="ej-res rg">✓ Cobras S/ 170</span></div><p>S/ 50 × 3.40 = S/ 170 en total → <strong>ganancia neta S/ 120</strong><br>Cuota alta = resultado improbable según la casa.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 2.00 — Apuesta S/ 100</span><span class="ej-res rg">Cobras S/ 200 · ganancia S/ 100</span></div><p>S/ 100 × 2.00 = S/ 200 total.<br>Una cuota 2.00 significa que la casa estima 50% de probabilidad.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 1.50 — Apuesta S/ 100</span><span class="ej-res rg">Cobras S/ 150 · ganancia S/ 50</span></div><p>Cuota baja = resultado muy probable según la casa.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 3.40 — Apuesta S/ 50</span><span class="ej-res rg">Cobras S/ 170 · ganancia S/ 120</span></div><p>Cuota alta = resultado improbable según la casa.</p></div>
     </div>
-    <div class="g-h3">Cuota decimal → Probabilidad implícita</div>
-    <div class="g-p">Puedes saber qué probabilidad le asigna la casa a cada resultado con esta fórmula simple:<br><strong>Probabilidad % = (1 ÷ cuota) × 100</strong></div>
+    <div class="g-h3">Probabilidad implícita de la cuota</div>
+    <div class="g-p"><strong>Fórmula:</strong> Probabilidad % = (1 ÷ cuota) × 100</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 1.40</span><span class="ej-res rd">Prob. implícita: 71%</span></div><p>1 ÷ 1.40 × 100 = <strong>71%</strong> — La casa cree que hay 71% de posibilidades de que ocurra.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 2.50</span><span class="ej-res rd">Prob. implícita: 40%</span></div><p>1 ÷ 2.50 × 100 = <strong>40%</strong> — La casa estima 40% de probabilidad.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 4.00</span><span class="ej-res rd">Prob. implícita: 25%</span></div><p>1 ÷ 4.00 × 100 = <strong>25%</strong> — Solo 1 de cada 4 veces debería ocurrir según la casa.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 1.40</span><span class="ej-res rd">71% de probabilidad implícita</span></div><p>1 ÷ 1.40 × 100 = 71% — La casa cree que hay 71% de posibilidades.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 2.50</span><span class="ej-res rd">40% de probabilidad implícita</span></div><p>1 ÷ 2.50 × 100 = 40%</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 4.00</span><span class="ej-res rd">25% de probabilidad implícita</span></div><p>1 ÷ 4.00 × 100 = 25% — Solo 1 de cada 4 veces debería ocurrir.</p></div>
     </div>
     <div class="g-h3">Formato Americano (Moneyline)</div>
-    <div class="g-p">Muy usado en EE.UU. y en algunas casas internacionales. Funciona con números positivos y negativos.</p>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">+150 (positivo = underdog)</span><span class="ej-res rg">Cobras S/ 150 de ganancia por S/ 100</span></div><p>Un +150 significa que por cada S/ 100 apostados, ganas S/ 150 de ganancia neta.<br>Total cobrado = S/ 250 (S/ 100 de apuesta + S/ 150 de ganancia).</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">-200 (negativo = favorito)</span><span class="ej-res rg">Necesitas apostar S/ 200 para ganar S/ 100</span></div><p>Un -200 significa que debes arriesgar S/ 200 para obtener S/ 100 de ganancia neta.<br>Total cobrado = S/ 300 (S/ 200 de apuesta + S/ 100 de ganancia).</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">+150 (underdog)</span><span class="ej-res rg">Ganas S/ 150 por cada S/ 100 apostados</span></div><p>Total cobrado = S/ 250 (apuesta S/ 100 + ganancia S/ 150).</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">-200 (favorito)</span><span class="ej-res rg">Apuestas S/ 200 para ganar S/ 100</span></div><p>Total cobrado = S/ 300 (apuesta S/ 200 + ganancia S/ 100).</p></div>
     </div>
-    <div class="g-h3">Formato Fraccional</div>
-    <div class="g-p">Usado principalmente en Reino Unido. Se lee como fracción: <strong>ganancia / apuesta</strong>.</div>
+    <div class="g-h3">Formato Fraccional (Reino Unido)</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">3/1 (se lee "tres a uno")</span><span class="ej-res rg">Ganas S/ 3 por cada S/ 1 apostado</span></div><p>Apuestas S/ 100 → ganas S/ 300 de ganancia + recuperas S/ 100 → total S/ 400.<br>Equivale a cuota decimal 4.00.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">1/2 (se lee "uno a dos")</span><span class="ej-res rg">Ganas S/ 1 por cada S/ 2 apostados</span></div><p>Apuestas S/ 100 → ganas S/ 50 de ganancia + recuperas S/ 100 → total S/ 150.<br>Equivale a cuota decimal 1.50.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">3/1 — "tres a uno"</span><span class="ej-res rg">Ganas S/ 3 por cada S/ 1 apostado</span></div><p>S/ 100 → ganas S/ 300 + recuperas S/ 100 = S/ 400 total. Equivale a cuota decimal 4.00.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">1/2 — "uno a dos"</span><span class="ej-res rg">Ganas S/ 1 por cada S/ 2 apostados</span></div><p>S/ 100 → ganas S/ 50 + recuperas S/ 100 = S/ 150 total. Equivale a cuota decimal 1.50.</p></div>
     </div>
-    <div class="tip"><div class="tip-lbl">💡 Conversión rápida al decimal</div><p>La mayoría de casas en Perú usan decimales. Si ves americano o fraccional, puedes cambiarlo en la configuración de la casa. El decimal es siempre el más fácil de calcular mentalmente.</p></div>`},
+    <div class="tip"><div class="tip-lbl">💡 Consejo</div><p>La mayoría de casas en Perú usan decimales. Si ves americano o fraccional, puedes cambiarlo en la configuración de la casa. El decimal es el más fácil de calcular mentalmente.</p></div>`},
 
   'value-betting':{titulo:'Value Betting',sub:'Cómo identificar cuotas con valor real y ganar a largo plazo',contenido:`
-    <div class="g-intro"><strong>¿Qué es el Value Betting?</strong> Una apuesta tiene <strong>valor (value)</strong> cuando la probabilidad real de que ocurra un resultado es <strong>mayor que la probabilidad implícita que ofrece la cuota</strong>. En otras palabras: la casa se equivocó y te está pagando más de lo que debería.</div>
+    <div class="g-intro"><strong>¿Qué es el Value Betting?</strong> Una apuesta tiene <strong>valor</strong> cuando la probabilidad real de que ocurra es <strong>mayor que la probabilidad implícita de la cuota</strong>. La casa se equivocó y te paga más de lo que debería.</div>
     <div class="g-h3">La fórmula del valor esperado</div>
-    <div class="g-p"><strong>Valor = (Probabilidad real × Cuota) - 1</strong><br>Si el resultado es positivo → hay valor. Si es negativo o cero → no hay valor.</div>
+    <div class="g-p"><strong>Valor = (Probabilidad real × Cuota) - 1</strong><br>Resultado positivo → hay valor. Resultado negativo → no hay valor.</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta CON valor</span><span class="ej-res rg">✓ Apuesta recomendada</span></div><p><strong>Situación:</strong> Tú estimas que el local tiene 60% de probabilidad de ganar.<br>La casa ofrece cuota <strong>2.00</strong> (implica 50% según ellos).<br>Valor = (0.60 × 2.00) - 1 = <strong>+0.20 → hay 20% de valor positivo</strong><br>A largo plazo, estas apuestas son rentables.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta SIN valor</span><span class="ej-res rp">✗ Evitar</span></div><p><strong>Situación:</strong> Tú estimas que el local tiene 50% de probabilidad de ganar.<br>La casa ofrece cuota <strong>1.70</strong> (implica 59% según ellos).<br>Valor = (0.50 × 1.70) - 1 = <strong>-0.15 → valor negativo</strong><br>A largo plazo, estas apuestas pierden dinero aunque aciertes la mitad.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta CON valor</span><span class="ej-res rg">✓ Recomendada</span></div><p>Estimas 60% de probabilidad de que gane el local.<br>La casa ofrece cuota <strong>2.00</strong> (implica 50% según ellos).<br>Valor = (0.60 × 2.00) - 1 = <strong>+0.20 → 20% de valor positivo</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta SIN valor</span><span class="ej-res rp">✗ Evitar</span></div><p>Estimas 50% de probabilidad.<br>La casa ofrece cuota <strong>1.70</strong> (implica 59% según ellos).<br>Valor = (0.50 × 1.70) - 1 = <strong>-0.15 → valor negativo</strong></p></div>
     </div>
     <div class="g-h3">¿Cómo estimas la probabilidad real?</div>
-    <div class="g-p">Aquí está la clave del value betting. Para estimar tu propia probabilidad necesitas analizar:</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Estadísticas recientes</span><span class="ej-res rd">Base del análisis</span></div><p>Últimos 5 partidos del equipo como local y visitante por separado. Promedio de goles marcados y encajados. Racha actual (victorias/derrotas consecutivas).</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Contexto del partido</span><span class="ej-res rd">Factor clave</span></div><p>¿Necesita ganar alguno de los dos? ¿Vienen de jugar entre semana? ¿Hay bajas importantes (portero, goleador titular)? ¿Es partido de vuelta con resultado del ida?</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Comparar con otras casas</span><span class="ej-res rg">Truco práctico</span></div><p>Si una casa ofrece cuota 2.20 y todas las demás ofrecen 1.80 para el mismo resultado, esa casa puede estar dando valor. Usa comparadores de cuotas para detectarlo.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Estadísticas recientes</span><span class="ej-res rd">Base del análisis</span></div><p>Últimos 5 partidos como local y visitante por separado. Promedio de goles marcados y encajados. Racha actual de resultados.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Contexto del partido</span><span class="ej-res rd">Factor clave</span></div><p>¿Necesita ganar alguno de los dos? ¿Hay bajas importantes? ¿Es partido de vuelta con resultado del ida?</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Comparar con otras casas</span><span class="ej-res rg">Truco práctico</span></div><p>Si una casa ofrece cuota 2.20 y todas las demás ofrecen 1.80, esa casa puede estar dando valor. Usa comparadores de cuotas.</p></div>
     </div>
-    <div class="g-h3">La verdad sobre el value betting</div>
-    <div class="g-p">El value betting <strong>no garantiza ganar cada apuesta</strong> — de hecho puedes perder muchas seguidas. Lo que garantiza es que, con suficientes apuestas con valor positivo, <strong>ganarás dinero a largo plazo</strong>. Por eso necesitas bankroll management sólido: aguantar las rachas negativas hasta que los números trabajen a tu favor.</p>
-    <div class="tip"><div class="tip-lbl">💡 Por dónde empezar</div><p>Empieza por mercados que conoces bien. Si ves Liga 1 Perú todos los fines de semana, tienes información que las casas no tienen — conoces el estado de ánimo del equipo, el rendimiento en casa con lluvia, o si el delantero titular realmente está en forma. Ese conocimiento local <strong>es tu ventaja real</strong>.</p></div>`},
+    <div class="tip"><div class="tip-lbl">💡 Tu ventaja como peruano</div><p>Si ves Liga 1 todos los fines de semana, tienes información que las casas no tienen — el estado de ánimo del equipo, rendimiento en casa con lluvia, si el delantero está realmente en forma. Ese conocimiento local <strong>es tu ventaja real</strong>.</p></div>`},
 
   'en-vivo':{titulo:'Apuestas en Vivo (In-Play)',sub:'Cómo apostar durante el partido con ventaja real',contenido:`
-    <div class="g-intro"><strong>¿Qué son?</strong> Apuestas que colocas <strong>mientras el partido está en curso</strong>. Las cuotas cambian en tiempo real según lo que pasa en el campo — goles, tarjetas, posesión, ocasiones. Es el mercado con más oportunidades de valor para quienes saben leer el juego.</div>
+    <div class="g-intro"><strong>¿Qué son?</strong> Apuestas que colocas <strong>mientras el partido está en curso</strong>. Las cuotas cambian en tiempo real según lo que pasa en el campo. Es el mercado con más oportunidades de valor para quienes saben leer el juego.</div>
     <div class="g-h3">Situaciones con valor en vivo</div>
     <div class="ejs">
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Favorito que va perdiendo</span><span class="ej-res rg">Oportunidad de valor</span></div><p><strong>Barcelona va 0-1 en el min 15</strong>. Cuota pre-partido: 1.30 → En vivo sube a 1.90-2.20.<br>Mismo equipo, misma calidad, mejor cuota. Si confías en la remontada, es buen momento de entrar.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Over en vivo con 0-0 a los 60 min</span><span class="ej-res rg">Estrategia común</span></div><p>Dos equipos ofensivos llevan 60 minutos sin goles. La casa ofrece <strong>Over 0.5 restante</strong> con cuota 1.60-1.80.<br>Estadísticamente, es muy difícil que no haya ningún gol en los últimos 30 min entre equipos atacantes.</p></div>
-      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cash Out — Retiro anticipado</span><span class="ej-res rd">Herramienta de gestión</span></div><p>Apostaste S/ 100 a Over 2.5. Van 75 min y hay 2 goles. La casa te ofrece S/ 65 de Cash Out.<br>Si aceptas: aseguras S/ 65 sin esperar el tercer gol.<br>Si rechazas: cobras S/ 172 con gol, o pierdes todo sin él.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Favorito que va perdiendo</span><span class="ej-res rg">Oportunidad de valor</span></div><p><strong>Barcelona va 0-1 en el min 15</strong>. Cuota pre-partido 1.30 → en vivo sube a 1.90-2.20.<br>Mismo equipo, misma calidad, mejor cuota.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Over en vivo con 0-0 a los 60 min</span><span class="ej-res rg">Estrategia común</span></div><p>Dos equipos ofensivos llevan 60 min sin goles. La casa ofrece Over 0.5 restante con cuota 1.60-1.80.<br>Es muy difícil que no haya ningún gol en los últimos 30 min.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cash Out — Retiro anticipado</span><span class="ej-res rd">Herramienta de gestión</span></div><p>Apostaste S/ 100 a Over 2.5. Van 75 min, hay 2 goles. La casa ofrece S/ 65 de Cash Out.<br>Si aceptas: aseguras S/ 65. Si rechazas: S/ 172 con gol, o pierdes todo sin él.</p></div>
     </div>
     <div class="g-h3">Estrategias básicas</div>
-    <div class="g-p"><strong>1. Over tardío con partido cerrado:</strong> Si llevan 60 min con 1 gol y los equipos son ofensivos, el Over 0.5 en los últimos 30 min tiene alta probabilidad a buena cuota.<br><br><strong>2. Favorito perdiendo en el primer tiempo:</strong> Si un equipo claramente superior va perdiendo al descanso por 1 gol, su cuota de remontada puede ser muy atractiva comparada con la pre-partido.<br><br><strong>3. Gol de expulsión:</strong> Si un equipo queda con 10 jugadores, el equipo contrario tiene mucho más espacio para atacar — buena oportunidad para Over o gol del equipo con ventaja numérica.</div>
-    <div class="tip"><div class="tip-lbl">⚠️ Precauciones importantes</div><p>Las casas aplican un "delay" de 3-8 segundos en apuestas en vivo. Pueden suspender mercados durante corners o penaltis. Nunca apuestes en vivo solo por emoción — siempre ten una razón táctica o estadística concreta antes de confirmar.</p></div>`}
+    <div class="g-p"><strong>1. Over tardío:</strong> Si llevan 60 min con 1 gol y los equipos son ofensivos, el Over 0.5 restante tiene alta probabilidad a buena cuota.<br><br><strong>2. Favorito perdiendo al descanso:</strong> Su cuota de remontada puede ser muy atractiva versus la pre-partido.<br><br><strong>3. Equipo con 10 jugadores:</strong> El rival tiene más espacio para atacar — buena oportunidad para Over.</div>
+    <div class="tip"><div class="tip-lbl">⚠️ Precauciones</div><p>Las casas aplican un delay de 3-8 segundos. Pueden suspender mercados en corners o penaltis. Nunca apuestes en vivo solo por emoción — siempre ten una razón táctica concreta.</p></div>`}
 };
 
 function abrirGuia(id){
@@ -610,12 +598,14 @@ function cerrarModal(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')cerrarModal();});
-
-// Scroll animations
 const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}
-  });
+  entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});
 },{threshold:.07});
 document.querySelectorAll('.blog-card,.mercado-card,.why-card,.casa-item').forEach((el,i)=>{
-  el.style.opacity='0';el.style.trans
+  el.style.opacity='0';el.style.transform='translateY(22px)';
+  el.style.transition=`opacity .5s ease ${i*.07}s,transform .5s ease ${i*.07}s`;
+  obs.observe(el);
+});
+</script>
+</body>
+</html>
