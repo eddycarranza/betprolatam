@@ -30,6 +30,51 @@ body{font-family:'DM Sans',sans-serif;background:var(--fondo);color:var(--texto)
 ::-webkit-scrollbar-track{background:var(--fondo2);}
 ::-webkit-scrollbar-thumb{background:var(--borde2);border-radius:3px;}
 
+/* ── PRONÓSTICOS DEL DÍA ── */
+.pronosticos-section{padding:4rem 2rem;}
+.fecha-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,212,38,.08);border:1px solid rgba(255,212,38,.2);padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:600;color:var(--amarillo);margin-bottom:1.5rem;}
+.pronosticos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.prono-card{background:var(--fondo2);border:1px solid var(--borde);border-radius:var(--r2);overflow:hidden;transition:all .25s;}
+.prono-card:hover{border-color:rgba(0,230,118,.3);transform:translateY(-3px);}
+.prono-liga{background:var(--fondo3);border-bottom:1px solid var(--borde);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;}
+.prono-liga-nombre{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--suave);}
+.prono-hora{font-size:.72rem;color:var(--muy-suave);}
+.prono-equipos{padding:1.2rem 1.4rem .8rem;}
+.prono-vs{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:.8rem;}
+.prono-equipo{flex:1;text-align:center;}
+.prono-equipo-nombre{font-weight:700;font-size:.95rem;line-height:1.2;}
+.prono-escudo{font-size:2rem;margin-bottom:.3rem;display:block;}
+.prono-vs-txt{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--muy-suave);flex-shrink:0;}
+.prono-body{padding:0 1.4rem 1.4rem;}
+.prono-mercado{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--verde);margin-bottom:.4rem;}
+.prono-apuesta{font-size:1rem;font-weight:700;margin-bottom:.5rem;}
+.prono-cuota{display:inline-flex;align-items:center;gap:6px;background:rgba(0,230,118,.08);border:1px solid rgba(0,230,118,.2);border-radius:6px;padding:3px 10px;font-size:.82rem;font-weight:700;color:var(--verde);margin-bottom:.8rem;}
+.prono-razon{font-size:.8rem;color:var(--suave);line-height:1.55;border-top:1px solid var(--borde);padding-top:.8rem;}
+.prono-confianza{display:flex;align-items:center;gap:6px;margin-top:.8rem;}
+.prono-conf-label{font-size:.7rem;color:var(--muy-suave);}
+.prono-estrellas{color:var(--amarillo);font-size:.85rem;}
+.prono-aviso{background:rgba(255,212,38,.05);border:1px solid rgba(255,212,38,.15);border-radius:var(--r);padding:1rem 1.4rem;margin-top:1.5rem;font-size:.78rem;color:var(--suave);line-height:1.6;}
+.prono-aviso strong{color:var(--amarillo);}
+
+/* ── GLOSARIO ── */
+.glosario-section{padding:4rem 2rem;background:var(--fondo2);border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);}
+.glosario-search-wrap{position:relative;max-width:500px;margin-bottom:1.5rem;}
+.glosario-search{width:100%;background:var(--fondo3);border:1px solid var(--borde2);border-radius:var(--r);padding:12px 16px 12px 44px;color:var(--texto);font-size:.95rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;}
+.glosario-search:focus{border-color:var(--verde);}
+.glosario-search::placeholder{color:var(--muy-suave);}
+.glosario-search-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--suave);font-size:1.1rem;pointer-events:none;}
+.glosario-letras{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem;}
+.letra-btn{background:var(--fondo3);border:1px solid var(--borde);color:var(--suave);font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.letra-btn:hover,.letra-btn.activa{background:var(--verde);border-color:var(--verde);color:#000;}
+.glosario-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;}
+.glosario-item{background:var(--fondo3);border:1px solid var(--borde);border-radius:var(--r);padding:1rem 1.2rem;transition:border-color .2s;}
+.glosario-item:hover{border-color:rgba(0,230,118,.2);}
+.glosario-item.oculto{display:none;}
+.gl-termino{font-weight:700;font-size:.92rem;margin-bottom:.3rem;}
+.gl-letra{font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--verde);margin-right:6px;}
+.gl-def{font-size:.82rem;color:var(--suave);line-height:1.55;}
+.glosario-empty{display:none;text-align:center;padding:2rem;color:var(--muy-suave);font-size:.9rem;grid-column:1/-1;}
+
 /* ── NAV ── */
 nav{background:rgba(8,12,18,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--borde);position:sticky;top:0;z-index:200;padding:0 2rem;}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:62px;}
@@ -175,6 +220,115 @@ footer{background:var(--fondo2);border-top:1px solid var(--borde);padding:3rem 2
   .hero-stats{gap:1.5rem;}
   .modal{margin:.5rem;max-height:94vh;}
 }
+
+
+/* ── ANALIZADOR IA ── */
+.pronosticos-section{padding:4rem 2rem;}
+.ia-widget{background:var(--fondo2);border:1px solid var(--borde2);border-radius:16px;overflow:hidden;}
+.ia-intro{background:linear-gradient(135deg,rgba(0,230,118,.06),rgba(0,200,83,.02));border-bottom:1px solid var(--borde);padding:1.5rem 2rem;}
+.ia-intro p{font-size:.9rem;color:var(--suave);line-height:1.7;max-width:700px;}
+.ia-form{padding:1.8rem 2rem;}
+.ia-inputs{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:1rem;margin-bottom:1rem;}
+.ia-field{display:flex;flex-direction:column;gap:.4rem;}
+.ia-field-liga{grid-column:1/-1;}
+.ia-field label{font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--suave);}
+.ia-field input{background:var(--fondo3);border:1px solid var(--borde2);border-radius:var(--r);padding:11px 14px;color:var(--texto);font-size:.92rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s,box-shadow .2s;}
+.ia-field input:focus{border-color:var(--verde);box-shadow:0 0 0 3px rgba(0,230,118,.1);}
+.ia-field input::placeholder{color:var(--muy-suave);}
+.ia-vs-sep{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--muy-suave);text-align:center;padding-bottom:8px;}
+.ia-extras{margin-bottom:1.4rem;}
+.ia-btn{width:100%;background:linear-gradient(135deg,var(--verde),var(--verde-d));color:#000;font-weight:700;font-size:1rem;padding:14px;border-radius:var(--r);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .2s;font-family:'DM Sans',sans-serif;letter-spacing:.3px;}
+.ia-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,230,118,.25);}
+.ia-btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.ia-btn-icon{font-size:1.2rem;}
+.ia-ejemplos{padding:1rem 2rem 1.2rem;border-top:1px solid var(--borde);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.ia-ej-label{font-size:.75rem;color:var(--muy-suave);font-weight:600;}
+.ia-ej-btn{background:var(--fondo3);border:1px solid var(--borde);color:var(--suave);font-size:.78rem;padding:5px 12px;border-radius:20px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.ia-ej-btn:hover{border-color:var(--verde);color:var(--verde);}
+.ia-loading{padding:2.5rem;text-align:center;border-top:1px solid var(--borde);}
+.ia-loading p{font-size:.85rem;color:var(--suave);margin-top:.8rem;}
+.ia-dots{display:flex;justify-content:center;gap:6px;}
+.ia-dots span{width:10px;height:10px;background:var(--verde);border-radius:50%;animation:iaDot 1.2s infinite ease-in-out;}
+.ia-dots span:nth-child(2){animation-delay:.2s;}
+.ia-dots span:nth-child(3){animation-delay:.4s;}
+@keyframes iaDot{0%,80%,100%{transform:scale(0);opacity:.3;}40%{transform:scale(1);opacity:1;}}
+.ia-resultado{border-top:1px solid var(--borde);}
+.ia-res-header{padding:1.2rem 2rem;background:rgba(0,230,118,.04);border-bottom:1px solid var(--borde);display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+.ia-res-badge{background:rgba(0,230,118,.12);border:1px solid rgba(0,230,118,.25);color:var(--verde);font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:20px;}
+.ia-res-partido{font-weight:700;font-size:.95rem;}
+.ia-res-body{padding:1.8rem 2rem;}
+.ia-res-body h3{font-family:"Bebas Neue",sans-serif;font-size:1.2rem;letter-spacing:1px;color:var(--verde);margin:1.2rem 0 .6rem;}
+.ia-res-body h3:first-child{margin-top:0;}
+.ia-res-body p{font-size:.87rem;color:var(--suave);line-height:1.75;margin-bottom:.8rem;}
+.ia-res-body strong{color:var(--texto);}
+.ia-mercado-card{background:var(--fondo3);border:1px solid var(--borde);border-radius:var(--r);padding:1rem 1.2rem;margin:.6rem 0;}
+.ia-mercado-card .mc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:.4rem;}
+.mc-nombre{font-weight:700;font-size:.92rem;}
+.mc-conf{font-size:.78rem;color:var(--amarillo);}
+.ia-mercado-card p{font-size:.82rem;color:var(--suave);line-height:1.6;margin:0;}
+.ia-aviso-res{background:rgba(255,61,87,.05);border:1px solid rgba(255,61,87,.15);border-radius:var(--r);padding:.8rem 1.2rem;margin-top:1.2rem;font-size:.78rem;color:var(--suave);}
+.prono-aviso{background:rgba(255,212,38,.05);border:1px solid rgba(255,212,38,.15);border-radius:0 0 16px 16px;padding:1rem 2rem;font-size:.78rem;color:var(--suave);line-height:1.6;}
+.prono-aviso strong{color:var(--amarillo);}
+@media(max-width:768px){
+  .ia-inputs{grid-template-columns:1fr;}.ia-vs-sep{display:none;}
+  .ia-form,.ia-intro,.ia-ejemplos,.ia-res-header,.ia-res-body,.prono-aviso{padding-left:1.2rem;padding-right:1.2rem;}
+}
+
+/* ── GLOSARIO ── */
+.glosario-section{padding:4rem 2rem;background:var(--fondo2);border-top:1px solid var(--borde);border-bottom:1px solid var(--borde);}
+.glosario-search-wrap{position:relative;max-width:500px;margin-bottom:1.5rem;}
+.glosario-search{width:100%;background:var(--fondo3);border:1px solid var(--borde2);border-radius:var(--r);padding:12px 16px 12px 44px;color:var(--texto);font-size:.9rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color .2s;}
+.glosario-search:focus{border-color:var(--verde);}
+.glosario-search::placeholder{color:var(--muy-suave);}
+.glosario-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--suave);pointer-events:none;}
+.glosario-letras{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.5rem;}
+.letra-btn{background:var(--fondo3);border:1px solid var(--borde);color:var(--suave);font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.letra-btn:hover,.letra-btn.activa{background:var(--verde);border-color:var(--verde);color:#000;}
+.glosario-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;}
+.gl-item{background:var(--fondo3);border:1px solid var(--borde);border-radius:var(--r);padding:1rem 1.2rem;transition:border-color .2s;}
+.gl-item:hover{border-color:rgba(0,230,118,.2);}
+.gl-item.oculto{display:none;}
+.gl-termino{font-weight:700;font-size:.9rem;margin-bottom:.3rem;}
+.gl-letra{font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--verde);margin-right:5px;}
+.gl-def{font-size:.81rem;color:var(--suave);line-height:1.55;}
+.gl-empty{display:none;text-align:center;padding:2rem;color:var(--muy-suave);grid-column:1/-1;}
+@media(max-width:1000px){.pronosticos-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.pronosticos-grid,.glosario-grid{grid-template-columns:1fr;}}
+
+/* ── PICKS MANUALES ── */
+.picks-section{padding:4rem 2rem;}
+.picks-tabs{display:flex;gap:.5rem;margin-bottom:1.8rem;background:var(--fondo2);border:1px solid var(--borde);border-radius:var(--r2);padding:.4rem;width:fit-content;}
+.pick-tab{padding:8px 22px;border-radius:8px;font-weight:700;font-size:.85rem;cursor:pointer;border:none;background:transparent;color:var(--suave);font-family:"DM Sans",sans-serif;transition:all .2s;}
+.pick-tab.activo{background:var(--verde);color:#000;}
+.picks-panel{display:none;}.picks-panel.activo{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.pick-card{background:var(--fondo2);border:1px solid var(--borde);border-radius:var(--r2);overflow:hidden;transition:all .25s;}
+.pick-card:hover{border-color:rgba(0,230,118,.3);transform:translateY(-3px);}
+.pick-top{background:var(--fondo3);border-bottom:1px solid var(--borde);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;}
+.pick-liga{font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--suave);}
+.pick-fecha{font-size:.7rem;color:var(--muy-suave);}
+.pick-match{padding:1.2rem 1.4rem .6rem;text-align:center;}
+.pick-equipos{font-weight:700;font-size:1rem;margin-bottom:.3rem;}
+.pick-vs{color:var(--muy-suave);font-size:.8rem;}
+.pick-body{padding:.6rem 1.4rem 1.4rem;}
+.pick-tipo{font-size:.68rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--verde);margin-bottom:.3rem;}
+.pick-apuesta{font-size:1rem;font-weight:700;margin-bottom:.5rem;}
+.pick-cuota-wrap{display:flex;align-items:center;gap:.8rem;margin-bottom:.8rem;}
+.pick-cuota{background:rgba(0,230,118,.08);border:1px solid rgba(0,230,118,.2);color:var(--verde);font-weight:700;font-size:.88rem;padding:4px 12px;border-radius:6px;}
+.pick-analisis{font-size:.8rem;color:var(--suave);line-height:1.6;border-top:1px solid var(--borde);padding-top:.8rem;}
+.pick-confianza{display:flex;align-items:center;gap:5px;margin-top:.7rem;}
+.pick-conf-lbl{font-size:.68rem;color:var(--muy-suave);}
+.pick-stars{color:var(--amarillo);font-size:.82rem;letter-spacing:1px;}
+/* combinada especial */
+.pick-card.combinada{border-color:rgba(255,212,38,.2);}
+.pick-card.combinada .pick-top{background:rgba(255,212,38,.05);}
+.pick-card.combinada .pick-tipo{color:var(--amarillo);}
+.pick-cuota-total{background:rgba(255,212,38,.08);border:1px solid rgba(255,212,38,.2);color:var(--amarillo);font-weight:700;font-size:.82rem;padding:3px 10px;border-radius:6px;}
+.pick-legs{background:var(--fondo4);border-radius:6px;padding:.8rem 1rem;margin-bottom:.8rem;}
+.pick-leg{font-size:.8rem;color:var(--suave);padding:3px 0;display:flex;align-items:flex-start;gap:6px;line-height:1.4;}
+.pick-leg::before{content:"→";color:var(--verde);flex-shrink:0;}
+@media(max-width:900px){.picks-panel.activo{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.picks-panel.activo{grid-template-columns:1fr;}}
+
 </style>
 </head>
 <body>
@@ -189,10 +343,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#" class="logo"><span class="logo-dot"></span>BetPro<span>Latam</span></a>
     <ul class="nav-links" id="nav-menu">
       <li><a href="#mercados">Guías</a></li>
+      <li><a href="#picks">Picks</a></li>
+      <li><a href="#pronosticos">Análisis IA</a></li>
+      <li><a href="#glosario">Glosario</a></li>
       <li><a href="#casas">Casas</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="legal/sobre-nosotros.html">Nosotros</a></li>
-      <li><a href="legal/juego-responsable.html">Juego Responsable</a></li>
     </ul>
     <div class="hamburger" onclick="this.classList.toggle('open');document.getElementById('nav-menu').classList.toggle('open')">
       <span></span><span></span><span></span>
@@ -397,6 +553,325 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Casa de apuestas 100% peruana. Acepta Yape, Plin y transferencias bancarias locales.</p>
         <span class="casa-tag">Casa peruana</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PICKS MANUALES -->
+<section class="picks-section" id="picks">
+  <div class="sec-wrap">
+    <div class="sec-header">
+      <span>🎯</span>
+      <h2>Picks de la Semana</h2>
+      <div class="sec-line"></div>
+      <span class="sec-tag">Actualizado semanalmente</span>
+    </div>
+
+    <!-- TABS -->
+    <div class="picks-tabs">
+      <button class="pick-tab activo" onclick="cambiarTab('simples',this)">⚽ Simples</button>
+      <button class="pick-tab" onclick="cambiarTab('combinadas',this)">🔗 Combinadas</button>
+    </div>
+
+    <!-- ═══ SIMPLES ═══ -->
+    <div class="picks-panel activo" id="panel-simples">
+
+      <!-- SIMPLE 1 — EDITA AQUÍ -->
+      <div class="pick-card">
+        <div class="pick-top">
+          <span class="pick-liga">🇪🇸 LaLiga</span>
+          <span class="pick-fecha">Sáb 22 Feb · 20:00</span>
+        </div>
+        <div class="pick-match">
+          <div class="pick-equipos">Barcelona vs Getafe</div>
+          <div class="pick-vs">Partido de liga regular</div>
+        </div>
+        <div class="pick-body">
+          <div class="pick-tipo">Pick simple</div>
+          <div class="pick-apuesta">Over 2.5 Goles</div>
+          <div class="pick-cuota-wrap">
+            <span class="pick-cuota">Cuota ~1.58</span>
+          </div>
+          <div class="pick-analisis">Barcelona en casa es el equipo más goleador de LaLiga. Getafe necesita puntos y saldrá a atacar. Historial de partidos con 3+ goles entre estos equipos.</div>
+          <div class="pick-confianza">
+            <span class="pick-conf-lbl">Confianza:</span>
+            <span class="pick-stars">★★★★☆</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIMPLE 2 — EDITA AQUÍ -->
+      <div class="pick-card">
+        <div class="pick-top">
+          <span class="pick-liga">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</span>
+          <span class="pick-fecha">Dom 23 Feb · 15:30</span>
+        </div>
+        <div class="pick-match">
+          <div class="pick-equipos">Arsenal vs Wolves</div>
+          <div class="pick-vs">Partido de liga regular</div>
+        </div>
+        <div class="pick-body">
+          <div class="pick-tipo">Pick simple</div>
+          <div class="pick-apuesta">Handicap Asiático Arsenal -1</div>
+          <div class="pick-cuota-wrap">
+            <span class="pick-cuota">Cuota ~1.72</span>
+          </div>
+          <div class="pick-analisis">Arsenal en casa tiene gran dominio. Wolves de visitante tiene una de las defensas más perforadas de la liga. El margen de victoria debería ser amplio.</div>
+          <div class="pick-confianza">
+            <span class="pick-conf-lbl">Confianza:</span>
+            <span class="pick-stars">★★★☆☆</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIMPLE 3 — EDITA AQUÍ -->
+      <div class="pick-card">
+        <div class="pick-top">
+          <span class="pick-liga">🇵🇪 Liga 1 Perú</span>
+          <span class="pick-fecha">Dom 23 Feb · 19:00</span>
+        </div>
+        <div class="pick-match">
+          <div class="pick-equipos">Alianza Lima vs César Vallejo</div>
+          <div class="pick-vs">Torneo Apertura</div>
+        </div>
+        <div class="pick-body">
+          <div class="pick-tipo">Pick simple</div>
+          <div class="pick-apuesta">BTTS — Ambos Marcan Sí</div>
+          <div class="pick-cuota-wrap">
+            <span class="pick-cuota">Cuota ~1.80</span>
+          </div>
+          <div class="pick-analisis">Alianza necesita ganar en casa. César Vallejo tiene buen ataque de visitante y suele marcar incluso en partidos difíciles. Se espera partido abierto.</div>
+          <div class="pick-confianza">
+            <span class="pick-conf-lbl">Confianza:</span>
+            <span class="pick-stars">★★★☆☆</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- fin simples -->
+
+    <!-- ═══ COMBINADAS ═══ -->
+    <div class="picks-panel" id="panel-combinadas">
+
+      <!-- COMBINADA 1 — EDITA AQUÍ -->
+      <div class="pick-card combinada">
+        <div class="pick-top">
+          <span class="pick-liga">🔗 Combinada 2 partidos</span>
+          <span class="pick-fecha">Sáb 22 Feb</span>
+        </div>
+        <div class="pick-match">
+          <div class="pick-equipos">Doble Over 2.5</div>
+          <div class="pick-vs">LaLiga + Bundesliga</div>
+        </div>
+        <div class="pick-body">
+          <div class="pick-tipo">Pick combinada</div>
+          <div class="pick-legs">
+            <div class="pick-leg">Barcelona vs Getafe — Over 2.5 (~1.58)</div>
+            <div class="pick-leg">Bayern Munich vs Stuttgart — Over 2.5 (~1.55)</div>
+          </div>
+          <div class="pick-cuota-wrap">
+            <span class="pick-cuota-total">Cuota total ~2.45</span>
+          </div>
+          <div class="pick-analisis">Dos partidos con tendencia goleadora clara. Bayern en casa es el equipo más ofensivo de Europa. Barcelona necesita ganar con margen. Combinada de bajo riesgo relativo.</div>
+          <div class="pick-confianza">
+            <span class="pick-conf-lbl">Confianza:</span>
+            <span class="pick-stars">★★★★☆</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMBINADA 2 — EDITA AQUÍ -->
+      <div class="pick-card combinada">
+        <div class="pick-top">
+          <span class="pick-liga">🔗 Combinada 3 partidos</span>
+          <span class="pick-fecha">Dom 23 Feb</span>
+        </div>
+        <div class="pick-match">
+          <div class="pick-equipos">Triple BTTS Sí</div>
+          <div class="pick-vs">Premier + Serie A + Ligue 1</div>
+        </div>
+        <div class="pick-body">
+          <div class="pick-tipo">Pick combinada</div>
+          <div class="pick-legs">
+            <div class="pick-leg">Arsenal vs Wolves — BTTS Sí (~1.75)</div>
+            <div class="pick-leg">Inter vs Napoli — BTTS Sí (~1.68)</div>
+            <div class="pick-leg">PSG vs Marsella — BTTS Sí (~1.80)</div>
+          </div>
+          <div class="pick-cuota-wrap">
+            <span class="pick-cuota-total">Cuota total ~5.30</span>
+          </div>
+          <div class="pick-analisis">Tres clásicos nacionales con ambos equipos motivados a marcar. Los clásicos históricamente tienen mayor porcentaje BTTS Sí que partidos normales.</div>
+          <div class="pick-confianza">
+            <span class="pick-conf-lbl">Confianza:</span>
+            <span class="pick-stars">★★★☆☆</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMBINADA 3 — EDITA AQUÍ -->
+      <div class="pick-card combinada">
+        <div class="pick-top">
+          <span class="pick-liga">🔗 Combinada mixta</span>
+          <span class="pick-fecha">Sáb-Dom 22-23 Feb</span>
+        </div>
+        <div class="pick-match">
+          <div class="pick-equipos">Favoritos en casa</div>
+          <div class="pick-vs">LaLiga + Liga 1 + Champions</div>
+        </div>
+        <div class="pick-body">
+          <div class="pick-tipo">Pick combinada</div>
+          <div class="pick-legs">
+            <div class="pick-leg">Barcelona vs Getafe — 1 (Local) (~1.30)</div>
+            <div class="pick-leg">Alianza Lima vs C. Vallejo — 1 (Local) (~1.55)</div>
+            <div class="pick-leg">Man City vs Real Madrid — Over 2.5 (~1.72)</div>
+          </div>
+          <div class="pick-cuota-wrap">
+            <span class="pick-cuota-total">Cuota total ~3.48</span>
+          </div>
+          <div class="pick-analisis">Tres locales fuertes con ventaja histórica en casa combinados con un partido de alto voltaje europeo. Combinada de perfil conservador-moderado.</div>
+          <div class="pick-confianza">
+            <span class="pick-conf-lbl">Confianza:</span>
+            <span class="pick-stars">★★★☆☆</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- fin combinadas -->
+
+    <div class="prono-aviso" style="margin-top:1.5rem;">⚠️ <strong>Aviso:</strong> Los picks son análisis educativos. Ningún pronóstico garantiza resultado. Apuesta responsablemente, solo con dinero que puedas permitirte perder. <strong>+18 únicamente.</strong></div>
+
+  </div>
+</section>
+
+
+<!-- ANALIZADOR IA -->
+<section class="pronosticos-section" id="pronosticos">
+  <div class="sec-wrap">
+    <div class="sec-header">
+      <span>🤖</span>
+      <h2>Analizador de Partidos con IA</h2>
+      <div class="sec-line"></div>
+      <span class="sec-tag">Powered by IA</span>
+    </div>
+
+    <div class="ia-widget">
+      <div class="ia-intro">
+        <p>Escribe cualquier partido y nuestra IA analiza los mercados más inteligentes para apostar. Basado en estadísticas históricas, forma reciente y contexto del partido.</p>
+      </div>
+
+      <div class="ia-form">
+        <div class="ia-inputs">
+          <div class="ia-field">
+            <label>Equipo Local</label>
+            <input type="text" id="ia-local" placeholder="ej: Alianza Lima, Barcelona, PSG..." autocomplete="off">
+          </div>
+          <div class="ia-vs-sep">VS</div>
+          <div class="ia-field">
+            <label>Equipo Visitante</label>
+            <input type="text" id="ia-visita" placeholder="ej: Universitario, Real Madrid..." autocomplete="off">
+          </div>
+          <div class="ia-field ia-field-liga">
+            <label>Liga / Competición</label>
+            <input type="text" id="ia-liga" placeholder="ej: Liga 1 Perú, LaLiga, Champions..." autocomplete="off">
+          </div>
+        </div>
+        <div class="ia-extras">
+          <div class="ia-field">
+            <label>Contexto adicional (opcional)</label>
+            <input type="text" id="ia-contexto" placeholder="ej: partido de vuelta, local necesita ganar, lluvia..." autocomplete="off">
+          </div>
+        </div>
+        <button class="ia-btn" id="ia-btn" onclick="analizarPartido()">
+          <span class="ia-btn-icon">🔮</span>
+          <span id="ia-btn-txt">Analizar con IA</span>
+        </button>
+      </div>
+
+      <div class="ia-resultado" id="ia-resultado" style="display:none;">
+        <div class="ia-res-header">
+          <span class="ia-res-badge">🤖 Análisis IA</span>
+          <span class="ia-res-partido" id="ia-res-partido"></span>
+        </div>
+        <div class="ia-res-body" id="ia-res-body"></div>
+      </div>
+
+      <div class="ia-loading" id="ia-loading" style="display:none;">
+        <div class="ia-dots"><span></span><span></span><span></span></div>
+        <p>Analizando el partido...</p>
+      </div>
+
+      <div class="ia-ejemplos">
+        <span class="ia-ej-label">Prueba con:</span>
+        <button class="ia-ej-btn" onclick="ejemploRapido('Alianza Lima','Universitario','Liga 1 Perú')">Alianza vs. Universitario</button>
+        <button class="ia-ej-btn" onclick="ejemploRapido('Real Madrid','Barcelona','LaLiga')">Real Madrid vs. Barcelona</button>
+        <button class="ia-ej-btn" onclick="ejemploRapido('Bayern Munich','Borussia Dortmund','Bundesliga')">Bayern vs. Dortmund</button>
+      </div>
+
+      <div class="prono-aviso">⚠️ <strong>Aviso:</strong> El análisis de IA es educativo y está basado en conocimiento estadístico general. No garantiza ningún resultado. Apuesta siempre de forma responsable. Solo mayores de 18 años.</div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSARIO -->
+<section class="glosario-section" id="glosario">
+  <div class="sec-wrap">
+    <div class="sec-header">
+      <span>📚</span>
+      <h2>Glosario de Apuestas</h2>
+      <div class="sec-line"></div>
+      <span class="sec-tag">+30 términos</span>
+    </div>
+    <div class="glosario-search-wrap">
+      <span class="glosario-icon">🔍</span>
+      <input type="text" class="glosario-search" id="gl-input" placeholder="Buscar término... ej: handicap, cuota, cash out">
+    </div>
+    <div class="glosario-letras">
+      <button class="letra-btn activa" onclick="filtrarLetra('TODAS',this)">Todas</button>
+      <button class="letra-btn" onclick="filtrarLetra('A',this)">A</button>
+      <button class="letra-btn" onclick="filtrarLetra('B',this)">B</button>
+      <button class="letra-btn" onclick="filtrarLetra('C',this)">C</button>
+      <button class="letra-btn" onclick="filtrarLetra('D',this)">D</button>
+      <button class="letra-btn" onclick="filtrarLetra('E',this)">E</button>
+      <button class="letra-btn" onclick="filtrarLetra('H',this)">H</button>
+      <button class="letra-btn" onclick="filtrarLetra('L',this)">L</button>
+      <button class="letra-btn" onclick="filtrarLetra('M',this)">M</button>
+      <button class="letra-btn" onclick="filtrarLetra('O',this)">O</button>
+      <button class="letra-btn" onclick="filtrarLetra('P',this)">P</button>
+      <button class="letra-btn" onclick="filtrarLetra('R',this)">R</button>
+      <button class="letra-btn" onclick="filtrarLetra('S',this)">S</button>
+      <button class="letra-btn" onclick="filtrarLetra('V',this)">V</button>
+    </div>
+    <div class="glosario-grid" id="gl-grid">
+      <div class="gl-item" data-l="A"><div class="gl-termino"><span class="gl-letra">A</span>Acumulada</div><div class="gl-def">Apuesta que combina varios partidos en un boleto. Todos deben acertar para ganar. A mayor cantidad de partidos, mayor cuota y mayor riesgo.</div></div>
+      <div class="gl-item" data-l="A"><div class="gl-termino"><span class="gl-letra">A</span>Asian Handicap</div><div class="gl-def">Ver Handicap Asiático. Mercado que elimina el empate dando ventaja o desventaja de goles a cada equipo antes de empezar.</div></div>
+      <div class="gl-item" data-l="B"><div class="gl-termino"><span class="gl-letra">B</span>Bankroll</div><div class="gl-def">Capital total que un apostador destina exclusivamente a apuestas. Una buena gestión de bankroll es clave para sobrevivir a largo plazo.</div></div>
+      <div class="gl-item" data-l="B"><div class="gl-termino"><span class="gl-letra">B</span>BTTS (Both Teams To Score)</div><div class="gl-def">Mercado donde apuestas si ambos equipos marcarán al menos un gol cada uno. Las opciones son Sí o No, sin importar el marcador final.</div></div>
+      <div class="gl-item" data-l="B"><div class="gl-termino"><span class="gl-letra">B</span>Bono de Bienvenida</div><div class="gl-def">Oferta de las casas para nuevos usuarios al registrarse. Suele ser un porcentaje del primer depósito o apuestas gratis. Siempre revisa los requisitos de apuesta (rollover).</div></div>
+      <div class="gl-item" data-l="C"><div class="gl-termino"><span class="gl-letra">C</span>Cash Out</div><div class="gl-def">Opción de retirar tu apuesta antes de que termine el partido. La casa te ofrece un monto menor al potencial de ganancia a cambio de asegurarte algo antes del resultado final.</div></div>
+      <div class="gl-item" data-l="C"><div class="gl-termino"><span class="gl-letra">C</span>Cuota (Odd / Momio)</div><div class="gl-def">Número que multiplica tu apuesta si aciertas. Cuota 2.00 = la casa estima 50% de probabilidad. Lo que cobras = apuesta x cuota.</div></div>
+      <div class="gl-item" data-l="C"><div class="gl-termino"><span class="gl-letra">C</span>Cuota Americana</div><div class="gl-def">Formato con signos positivos y negativos. +150 = ganas S/150 por cada S/100 apostados. -200 = necesitas apostar S/200 para ganar S/100.</div></div>
+      <div class="gl-item" data-l="D"><div class="gl-termino"><span class="gl-letra">D</span>Double Chance</div><div class="gl-def">Mercado que cubre dos resultados en uno. Ejemplo: 1X cubre local o empate. Menor cuota pero mayor seguridad que el 1X2 normal.</div></div>
+      <div class="gl-item" data-l="D"><div class="gl-termino"><span class="gl-letra">D</span>Draw No Bet</div><div class="gl-def">Apuesta donde si hay empate te devuelven el dinero. Solo ganas si acierta el equipo elegido. Elimina el riesgo del empate a cambio de menor cuota.</div></div>
+      <div class="gl-item" data-l="E"><div class="gl-termino"><span class="gl-letra">E</span>Expected Value (EV)</div><div class="gl-def">Valor esperado de una apuesta. Se calcula: (Probabilidad real x Cuota) - 1. Si el resultado es mayor a 0, la apuesta tiene valor positivo y es rentable a largo plazo.</div></div>
+      <div class="gl-item" data-l="E"><div class="gl-termino"><span class="gl-letra">E</span>Edge (Ventaja)</div><div class="gl-def">Diferencia entre tu estimación de probabilidad y la probabilidad implícita de la cuota. Si tu estimación es mayor, tienes ventaja. Base del value betting.</div></div>
+      <div class="gl-item" data-l="H"><div class="gl-termino"><span class="gl-letra">H</span>Handicap Asiático</div><div class="gl-def">Mercado que elimina el empate. Da ventaja o desventaja de goles. Si el resultado ajustado es empate exacto, la apuesta se devuelve íntegra.</div></div>
+      <div class="gl-item" data-l="H"><div class="gl-termino"><span class="gl-letra">H</span>Handicap Europeo</div><div class="gl-def">Similar al asiático pero incluye el empate como tercer resultado. NO devuelve la apuesta en empate ajustado — directamente se pierde.</div></div>
+      <div class="gl-item" data-l="H"><div class="gl-termino"><span class="gl-letra">H</span>HT/FT (Medio tiempo / Final)</div><div class="gl-def">Apuesta combinada sobre el resultado al descanso Y el resultado final. Ejemplo: X/1 = empate al descanso y local gana al final. Cuotas muy altas.</div></div>
+      <div class="gl-item" data-l="L"><div class="gl-termino"><span class="gl-letra">L</span>Lay Bet</div><div class="gl-def">Apostar CONTRA un resultado. Disponible en exchanges. Actúas como la casa: cobras si el resultado NO ocurre, pagas si ocurre.</div></div>
+      <div class="gl-item" data-l="L"><div class="gl-termino"><span class="gl-letra">L</span>Línea</div><div class="gl-def">El valor de referencia en mercados Over/Under. La línea 2.5 divide: más de 2 goles (Over) o menos de 3 (Under). Nunca es un número entero para evitar empates.</div></div>
+      <div class="gl-item" data-l="M"><div class="gl-termino"><span class="gl-letra">M</span>Martingala</div><div class="gl-def">Estrategia que consiste en doblar la apuesta tras cada pérdida. Muy peligrosa — una racha de 6 pérdidas con apuesta de S/10 te obliga a apostar S/640 en la siguiente.</div></div>
+      <div class="gl-item" data-l="M"><div class="gl-termino"><span class="gl-letra">M</span>Mercado</div><div class="gl-def">El tipo de apuesta dentro de un partido. Ejemplos: 1X2, Over/Under, BTTS, Handicap, Primer goleador, Córners. Cada partido puede tener decenas de mercados.</div></div>
+      <div class="gl-item" data-l="M"><div class="gl-termino"><span class="gl-letra">M</span>Momio</div><div class="gl-def">Nombre en Latinoamérica para la cuota (odd). Refleja la probabilidad implícita de cada resultado. Un momio de 2.00 significa 50% de probabilidad según la casa.</div></div>
+      <div class="gl-item" data-l="O"><div class="gl-termino"><span class="gl-letra">O</span>Over / Under</div><div class="gl-def">Apuestas al total de goles del partido. Over 2.5 = necesitas 3+ goles. Under 2.5 = necesitas 2 o menos. El número nunca es entero para evitar devoluciones.</div></div>
+      <div class="gl-item" data-l="P"><div class="gl-termino"><span class="gl-letra">P</span>Push</div><div class="gl-def">Cuando el resultado ajustado coincide exactamente con el handicap y la apuesta se devuelve íntegra. Solo ocurre en Handicap Asiático de números enteros.</div></div>
+      <div class="gl-item" data-l="P"><div class="gl-termino"><span class="gl-letra">P</span>Parlay / Parlé</div><div class="gl-def">Otro nombre para la acumulada. Combinas varios eventos y todos deben acertar. Las cuotas se multiplican entre sí generando potenciales muy altos.</div></div>
+      <div class="gl-item" data-l="R"><div class="gl-termino"><span class="gl-letra">R</span>ROI</div><div class="gl-def">Retorno sobre la inversión. Mide si eres rentable: (Ganancias netas / Total apostado) x 100. Un ROI positivo sostenido en el tiempo indica que eres un apostador ganador.</div></div>
+      <div class="gl-item" data-l="R"><div class="gl-termino"><span class="gl-letra">R</span>Rollover</div><div class="gl-def">Requisito de apuesta de los bonos. Si el bono tiene rollover x5, debes apostar 5 veces el monto del bono antes de poder retirar ganancias. Siempre lee los términos.</div></div>
+      <div class="gl-item" data-l="S"><div class="gl-termino"><span class="gl-letra">S</span>Sure Bet</div><div class="gl-def">Cubrir todos los resultados en diferentes casas aprovechando diferencias de cuotas para garantizar ganancia sin importar el resultado. Requiere cuentas en varias casas.</div></div>
+      <div class="gl-item" data-l="S"><div class="gl-termino"><span class="gl-letra">S</span>Sistema</div><div class="gl-def">Apuesta múltiple donde no todas las selecciones necesitan acertar. Un sistema 2/3 gana si aciertas al menos 2 de 3 partidos seleccionados.</div></div>
+      <div class="gl-item" data-l="V"><div class="gl-termino"><span class="gl-letra">V</span>Value Bet</div><div class="gl-def">Apuesta donde la probabilidad real de que ocurra es mayor que la probabilidad implícita de la cuota. La casa se equivocó y te paga más de lo que debería.</div></div>
+      <div class="gl-item" data-l="V"><div class="gl-termino"><span class="gl-letra">V</span>Ventaja de la Casa (Margen)</div><div class="gl-def">El porcentaje matemático que la casa retiene de cada apuesta. Si sumas las probabilidades implícitas de todos los resultados, siempre superan el 100%.</div></div>
+      <div class="gl-empty" id="gl-empty">No se encontraron términos. Intenta con otra palabra.</div>
     </div>
   </div>
 </section>
@@ -616,6 +1091,153 @@ document.querySelectorAll('.blog-card,.mercado-card,.why-card,.casa-item').forEa
   el.style.opacity='0';el.style.transform='translateY(22px)';
   el.style.transition=`opacity .5s ease ${i*.07}s,transform .5s ease ${i*.07}s`;
   obs.observe(el);
+});
+
+
+
+// ── PICKS TABS ──
+function cambiarTab(panel, btn) {
+  document.querySelectorAll('.pick-tab').forEach(b => b.classList.remove('activo'));
+  document.querySelectorAll('.picks-panel').forEach(p => p.classList.remove('activo'));
+  btn.classList.add('activo');
+  document.getElementById('panel-' + panel).classList.add('activo');
+}
+
+// ── ANALIZADOR IA ──
+function ejemploRapido(local, visita, liga) {
+  document.getElementById('ia-local').value = local;
+  document.getElementById('ia-visita').value = visita;
+  document.getElementById('ia-liga').value = liga;
+  document.getElementById('ia-contexto').value = '';
+  analizarPartido();
+}
+
+async function analizarPartido() {
+  const local   = document.getElementById('ia-local').value.trim();
+  const visita  = document.getElementById('ia-visita').value.trim();
+  const liga    = document.getElementById('ia-liga').value.trim();
+  const contexto = document.getElementById('ia-contexto').value.trim();
+
+  if (!local || !visita) {
+    alert('Por favor ingresa ambos equipos.');
+    return;
+  }
+
+  const btn = document.getElementById('ia-btn');
+  const btnTxt = document.getElementById('ia-btn-txt');
+  const loading = document.getElementById('ia-loading');
+  const resultado = document.getElementById('ia-resultado');
+
+  btn.disabled = true;
+  btnTxt.textContent = 'Analizando...';
+  loading.style.display = 'block';
+  resultado.style.display = 'none';
+
+  const prompt = `Eres un analista experto en apuestas deportivas. Tu tarea es analizar partidos de fútbol y recomendar mercados de apuesta de forma educativa y honesta.
+
+PARTIDO: ${local} vs ${visita}
+LIGA: ${liga || 'No especificada'}
+CONTEXTO ADICIONAL: ${contexto || 'Ninguno'}
+
+REGLAS IMPORTANTES QUE DEBES SEGUIR:
+1. NUNCA menciones jugadores específicos por nombre — no tienes datos en tiempo real de lesiones, sanciones ni alineaciones actuales.
+2. NUNCA inventes estadísticas exactas como "gana el 73% de sus partidos en casa" — usa rangos generales y menciona que son estimaciones históricas.
+3. Basa tu análisis en el ESTILO DE JUEGO conocido de los equipos, su historia en la competición y el contexto dado por el usuario.
+4. Si el usuario da contexto adicional (bajas, racha, etc.), úsalo como base principal del análisis.
+5. Sé honesto cuando la información sea limitada — es mejor decir "históricamente este tipo de partido tiende a..." que inventar datos.
+6. Las cuotas que menciones son SOLO REFERENCIAS ORIENTATIVAS, nunca exactas.
+
+Responde SOLO con este HTML, sin texto previo ni posterior:
+
+<h3>📊 Análisis del Partido</h3>
+<p>Analiza el estilo de juego de cada equipo, qué tipo de encuentro se espera tácticamente y qué factores del contexto son relevantes. 3-4 oraciones honestas sin inventar datos de jugadores.</p>
+
+<h3>🎯 Mercados Recomendados</h3>
+<div class="ia-mercado-card"><div class="mc-top"><span class="mc-nombre">MERCADO 1</span><span class="mc-conf">★★★★☆ Confianza alta</span></div><p>Razón táctica/histórica clara de por qué este mercado tiene sentido. Sin datos inventados.</p></div>
+<div class="ia-mercado-card"><div class="mc-top"><span class="mc-nombre">MERCADO 2</span><span class="mc-conf">★★★☆☆ Confianza media</span></div><p>Razón táctica/histórica clara.</p></div>
+<div class="ia-mercado-card"><div class="mc-top"><span class="mc-nombre">MERCADO 3</span><span class="mc-conf">★★★☆☆ Confianza media</span></div><p>Razón táctica/histórica clara.</p></div>
+
+<h3>⚠️ Factores de Riesgo</h3>
+<p>Lista 2-3 factores reales que podrían cambiar el resultado: motivación, condición del campo, partidos recientes si el usuario los mencionó, etc.</p>
+
+<h3>💡 Consejo Final</h3>
+<p>Recomendación concreta y educativa. Recuerda que este es un análisis educativo, que ningún pronóstico es seguro, y que siempre se debe apostar de forma responsable con dinero que se pueda permitir perder.</p>`;
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await response.json();
+    const texto = data.content.map(i => i.text || '').join('');
+
+    document.getElementById('ia-res-partido').textContent = local + ' vs ' + visita + (liga ? ' · ' + liga : '');
+    document.getElementById('ia-res-body').innerHTML = texto;
+    resultado.style.display = 'block';
+
+  } catch (err) {
+    document.getElementById('ia-res-partido').textContent = local + ' vs ' + visita;
+    document.getElementById('ia-res-body').innerHTML = '<p style="color:var(--rojo)">Error al conectar con la IA. Verifica tu conexión e intenta de nuevo.</p>';
+    resultado.style.display = 'block';
+  }
+
+  loading.style.display = 'none';
+  btn.disabled = false;
+  btnTxt.textContent = 'Analizar con IA';
+  document.getElementById('ia-resultado').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Enter key triggers analysis
+['ia-local','ia-visita','ia-liga','ia-contexto'].forEach(id => {
+  const el = document.getElementById(id);
+  if(el) el.addEventListener('keydown', e => { if(e.key === 'Enter') analizarPartido(); });
+});
+
+// Fecha de hoy en pronósticos
+(function(){
+  const d = new Date();
+  const dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const el = document.getElementById('fecha-hoy');
+  if(el) el.textContent = '📅 ' + dias[d.getDay()] + ' ' + d.getDate() + ' de ' + meses[d.getMonth()] + ' ' + d.getFullYear();
+})();
+
+// Glosario — búsqueda y filtro por letra
+function filtrarLetra(letra, btn){
+  document.querySelectorAll('.letra-btn').forEach(b => b.classList.remove('activa'));
+  btn.classList.add('activa');
+  document.getElementById('gl-input').value = '';
+  const items = document.querySelectorAll('.gl-item');
+  let vis = 0;
+  items.forEach(item => {
+    const mostrar = letra === 'TODAS' || item.dataset.l === letra;
+    item.classList.toggle('oculto', !mostrar);
+    if(mostrar) vis++;
+  });
+  const empty = document.getElementById('gl-empty');
+  if(empty) empty.style.display = vis === 0 ? 'block' : 'none';
+}
+
+document.getElementById('gl-input').addEventListener('input', function(){
+  const q = this.value.toLowerCase().trim();
+  document.querySelectorAll('.letra-btn').forEach(b => b.classList.remove('activa'));
+  document.querySelector('.letra-btn').classList.add('activa');
+  const items = document.querySelectorAll('.gl-item');
+  let vis = 0;
+  items.forEach(item => {
+    const texto = item.textContent.toLowerCase();
+    const mostrar = !q || texto.includes(q);
+    item.classList.toggle('oculto', !mostrar);
+    if(mostrar) vis++;
+  });
+  const empty = document.getElementById('gl-empty');
+  if(empty) empty.style.display = vis === 0 ? 'block' : 'none';
 });
 </script>
 </body>
