@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre Nosotros — BetProLatam</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#00e676;--fondo:#080c12;--fondo2:#0e1420;--fondo3:#141c2c;--borde:#1e2d42;--texto:#dde6f5;--suave:#6b82a0;--muy-suave:#3a4f6a;--amarillo:#ffd426;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--fondo);color:var(--texto);line-height:1.7;}
+nav{background:rgba(8,12,18,.97);border-bottom:1px solid var(--borde);padding:0 2rem;position:sticky;top:0;z-index:100;}
+.nav-inner{max-width:900px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:3px;color:var(--verde);text-decoration:none;}
+.logo span{color:var(--texto);}
+.nav-back{color:var(--suave);text-decoration:none;font-size:.85rem;font-weight:600;}
+.nav-back:hover{color:var(--verde);}
+.hero-about{background:linear-gradient(135deg,#0a0e14,#0d1a2e);border-bottom:1px solid var(--borde);padding:4rem 2rem;}
+.hero-about-inner{max-width:820px;margin:0 auto;}
+.page-tag{display:inline-block;background:rgba(0,230,118,.08);border:1px solid rgba(0,230,118,.2);color:var(--verde);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:1.5rem;}
+h1{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:2px;margin-bottom:.8rem;}
+.hero-sub{font-size:1rem;color:var(--suave);max-width:600px;line-height:1.8;}
+.container{max-width:820px;margin:0 auto;padding:3.5rem 2rem 6rem;}
+h2{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;color:var(--verde);margin:2.5rem 0 .8rem;}
+p{font-size:.9rem;color:var(--suave);margin-bottom:1rem;line-height:1.8;}
+p strong{color:var(--texto);}
+ul{list-style:none;padding:0;margin-bottom:1.2rem;}
+ul li{font-size:.9rem;color:var(--suave);padding:.4rem 0 .4rem 1.2rem;border-left:2px solid var(--borde);margin-bottom:.5rem;line-height:1.7;}
+ul li strong{color:var(--texto);}
+.valores-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:1.2rem 0;}
+.valor-card{background:var(--fondo2);border:1px solid var(--borde);border-radius:10px;padding:1.4rem;}
+.valor-icon{font-size:1.8rem;margin-bottom:.7rem;display:block;}
+.valor-card h3{font-size:.95rem;font-weight:700;color:var(--texto);margin-bottom:.4rem;}
+.valor-card p{font-size:.82rem;color:var(--suave);margin:0;line-height:1.6;}
+.mision-box{background:linear-gradient(135deg,#0a1f14,#080c12);border:1px solid rgba(0,230,118,.2);border-radius:10px;padding:2rem;margin:2rem 0;}
+.mision-box h3{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;color:var(--verde);margin-bottom:.8rem;}
+.mision-box p{color:var(--suave);font-size:.9rem;margin:0;line-height:1.8;}
+.metodologia-steps{display:flex;flex-direction:column;gap:.8rem;margin:1.2rem 0;}
+.step{display:flex;gap:1rem;align-items:flex-start;background:var(--fondo2);border:1px solid var(--borde);border-radius:8px;padding:1rem 1.2rem;}
+.step-num{width:32px;height:32px;background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:var(--verde);flex-shrink:0;}
+.step-text h4{font-size:.9rem;font-weight:700;color:var(--texto);margin-bottom:.2rem;}
+.step-text p{font-size:.82rem;color:var(--suave);margin:0;line-height:1.6;}
+.afil-disclosure{background:rgba(255,212,38,.05);border:1px solid rgba(255,212,38,.2);border-radius:10px;padding:1.4rem 1.6rem;margin:2rem 0;}
+.afil-disclosure h3{font-size:.9rem;font-weight:700;color:var(--amarillo);margin-bottom:.6rem;}
+.afil-disclosure p{font-size:.85rem;color:var(--suave);margin:0;line-height:1.7;}
+.contacto-box{background:var(--fondo2);border:1px solid var(--borde);border-radius:10px;padding:1.5rem;margin-top:2rem;}
+.contacto-box p{margin:0;font-size:.88rem;line-height:2;}
+.contacto-box strong{color:var(--texto);}
+.btn-contacto{display:inline-block;background:var(--verde);color:#000;font-weight:700;padding:11px 24px;border-radius:7px;text-decoration:none;font-size:.88rem;margin-top:1rem;}
+.footer-legal{text-align:center;padding:2rem;border-top:1px solid var(--borde);color:var(--muy-suave);font-size:.8rem;margin-top:4rem;}
+.footer-legal a{color:var(--verde);text-decoration:none;}
+@media(max-width:600px){.valores-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">BetPro<span>Latam</span></a>
+    <a href="../index.html" class="nav-back">← Volver al inicio</a>
+  </div>
+</nav>
+
+<div class="hero-about">
+  <div class="hero-about-inner">
+    <span class="page-tag">Quiénes somos</span>
+    <h1>Sobre BetProLatam</h1>
+    <p class="hero-sub">Somos una guía independiente de apuestas deportivas creada en Perú para toda Latinoamérica. Nuestro objetivo es que cualquier persona pueda entender cómo funcionan los mercados y elegir la mejor casa de apuestas con información real.</p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="mision-box">
+    <h3>🎯 Nuestra Misión</h3>
+    <p>Democratizar el conocimiento sobre apuestas deportivas en Latinoamérica. Queremos que cada apostador, desde el principiante hasta el avanzado, tenga acceso a guías claras, comparativas honestas y herramientas que le den ventaja real — todo de forma completamente gratuita.</p>
+  </div>
+
+  <h2>¿Por qué creamos BetProLatam?</h2>
+  <p>Las apuestas deportivas crecen cada año en Latinoamérica, pero la mayoría de recursos disponibles están en inglés, son poco claros o tienen un claro sesgo hacia casas que pagan más comisiones. <strong>BetProLatam nació para cambiar eso.</strong></p>
+  <p>Somos apasionados del fútbol y las apuestas deportivas con años de experiencia analizando mercados. Decidimos crear este sitio después de ver cuántas personas pierden dinero simplemente por no entender cómo funciona un Handicap Asiático o cuándo elegir Over/Under.</p>
+
+  <h2>Nuestros Valores</h2>
+  <div class="valores-grid">
+    <div class="valor-card">
+      <span class="valor-icon">🔍</span>
+      <h3>Transparencia total</h3>
+      <p>Declaramos abiertamente que usamos enlaces de afiliado. Nuestras opiniones no están compradas — si una casa no es buena, no la recomendamos.</p>
+    </div>
+    <div class="valor-card">
+      <span class="valor-icon">📚</span>
+      <h3>Educación primero</h3>
+      <p>Antes de redirigirte a cualquier casa, queremos asegurarnos de que entiendes el mercado en el que vas a apostar.</p>
+    </div>
+    <div class="valor-card">
+      <span class="valor-icon">🛡️</span>
+      <h3>Juego responsable</h3>
+      <p>Solo enlazamos a casas con herramientas de autoexclusión y límites de depósito. El entretenimiento no debe convertirse en un problema.</p>
+    </div>
+    <div class="valor-card">
+      <span class="valor-icon">🇵🇪</span>
+      <h3>Hecho en Latinoamérica</h3>
+      <p>Contenido pensado para el apostador peruano, mexicano, colombiano y de toda la región. Sin traducciones forzadas.</p>
+    </div>
+  </div>
+
+  <h2>¿Cómo Evaluamos las Casas de Apuestas?</h2>
+  <p>Antes de recomendar cualquier casa, la evaluamos con nuestra metodología propia de 5 pasos:</p>
+  <div class="metodologia-steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <h4>Verificación de licencia</h4>
+        <p>Comprobamos que la casa tenga licencia vigente en al menos una jurisdicción regulada (Malta MGA, Gibraltar, Curaçao, o licencia local en Perú/Colombia/México).</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <h4>Análisis de bonos y condiciones</h4>
+        <p>Revisamos los términos reales de los bonos: rollover, plazos, restricciones de mercados y condiciones de retiro.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <h4>Experiencia de usuario</h4>
+        <p>Evaluamos la app móvil, la velocidad de la web, los métodos de pago disponibles para Perú y la calidad del soporte al cliente.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-text">
+        <h4>Calidad de cuotas y mercados</h4>
+        <p>Comparamos las cuotas de cada casa en mercados clave (Premier League, LaLiga, Champions League, Liga 1 Perú) frente al promedio del mercado.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-text">
+        <h4>Reputación y seguridad</h4>
+        <p>Revisamos el historial de pagos, quejas de usuarios y la velocidad de procesamiento de retiros antes de incluir cualquier casa.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="afil-disclosure">
+    <h3>💡 Divulgación de Afiliados — Leélo</h3>
+    <p>BetProLatam participa en programas de afiliados con las casas que recomendamos. Esto significa que si te registras a través de nuestros enlaces, podemos recibir una comisión económica. <strong>Esta comisión no tiene ningún coste para ti</strong> — el bono que recibes es exactamente el mismo que si entras directamente. Nuestras clasificaciones y opiniones son independientes y no están condicionadas por las comisiones. Si una casa baja la calidad de su producto, la bajamos en el ranking.</p>
+  </div>
+
+  <h2>¿Quién hay detrás de BetProLatam?</h2>
+  <p>BetProLatam fue fundado por una persona natural peruana apasionada del fútbol y las apuestas deportivas. El sitio opera de forma independiente, sin inversores ni acuerdos exclusivos con ninguna casa de apuestas.</p>
+  <p>Actualmente somos un proyecto en crecimiento. Si eres especialista en apuestas deportivas, SEO o mercados y quieres colaborar, escríbenos.</p>
+
+  <h2>Contáctanos</h2>
+  <div class="contacto-box">
+    <p>
+      📧 <strong>General:</strong> contacto@betprolatam.com<br>
+      📧 <strong>Afiliados / Colaboraciones:</strong> afiliados@betprolatam.com<br>
+      📧 <strong>Privacidad / Legal:</strong> privacidad@betprolatam.com<br>
+      📲 <strong>Telegram:</strong> Únete a nuestro canal para contacto directo<br>
+      ⏱️ <strong>Tiempo de respuesta:</strong> máximo 48 horas hábiles
+    </p>
+    <a href="mailto:contacto@betprolatam.com" class="btn-contacto">Enviar mensaje →</a>
+  </div>
+
+</div>
+<div class="footer-legal">
+  © 2025 BetProLatam ·
+  <a href="aviso-legal.html">Aviso Legal</a> ·
+  <a href="politica-privacidad.html">Privacidad</a> ·
+  <a href="juego-responsable.html">Juego Responsable</a>
+</div>
+</body>
+</html>

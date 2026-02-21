@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juego Responsable — BetProLatam</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--verde:#00e676;--fondo:#080c12;--fondo2:#0e1420;--fondo3:#141c2c;--borde:#1e2d42;--texto:#dde6f5;--suave:#6b82a0;--muy-suave:#3a4f6a;--rojo:#ff3d57;--amarillo:#ffd426;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--fondo);color:var(--texto);line-height:1.7;}
+nav{background:rgba(8,12,18,.97);border-bottom:1px solid var(--borde);padding:0 2rem;position:sticky;top:0;z-index:100;}
+.nav-inner{max-width:900px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:3px;color:var(--verde);text-decoration:none;}
+.logo span{color:var(--texto);}
+.nav-back{color:var(--suave);text-decoration:none;font-size:.85rem;font-weight:600;}
+.nav-back:hover{color:var(--verde);}
+.container{max-width:820px;margin:0 auto;padding:4rem 2rem 6rem;}
+.page-tag{display:inline-block;background:rgba(255,61,87,.08);border:1px solid rgba(255,61,87,.25);color:#ff8a9a;font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:1.5rem;}
+h1{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:2px;margin-bottom:.5rem;}
+.fecha{font-size:.82rem;color:var(--suave);margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--borde);}
+h2{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;color:var(--verde);margin:2.5rem 0 .8rem;}
+p{font-size:.9rem;color:var(--suave);margin-bottom:1rem;line-height:1.8;}
+p strong{color:var(--texto);}
+ul{list-style:none;padding:0;margin-bottom:1.2rem;}
+ul li{font-size:.9rem;color:var(--suave);padding:.4rem 0 .4rem 1.2rem;border-left:2px solid var(--borde);margin-bottom:.5rem;line-height:1.7;}
+ul li strong{color:var(--texto);}
+.alerta-box{background:rgba(255,61,87,.07);border:1px solid rgba(255,61,87,.25);border-radius:10px;padding:1.5rem;margin:2rem 0;}
+.alerta-box h3{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;color:#ff8a9a;margin-bottom:.8rem;}
+.alerta-box p{color:#ffb3bc;margin:0;font-size:.88rem;}
+.info-box{background:var(--fondo2);border:1px solid var(--borde);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.info-box p{margin:0;font-size:.87rem;line-height:1.9;}
+.test-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1.2rem 0;}
+.test-item{background:var(--fondo2);border:1px solid var(--borde);border-radius:8px;padding:1rem 1.2rem;font-size:.85rem;color:var(--suave);line-height:1.6;}
+.test-item::before{content:'□ ';font-size:1rem;color:var(--rojo);}
+.limites-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0;}
+.limite-card{background:var(--fondo2);border:1px solid var(--borde);border-radius:8px;padding:1.2rem;text-align:center;}
+.limite-icon{font-size:2rem;margin-bottom:.5rem;display:block;}
+.limite-title{font-size:.85rem;font-weight:700;color:var(--texto);margin-bottom:.3rem;}
+.limite-desc{font-size:.78rem;color:var(--suave);line-height:1.5;}
+.ayuda-card{background:linear-gradient(135deg,#0d1a2e,#0a1020);border:1px solid rgba(0,230,118,.2);border-radius:10px;padding:1.8rem;margin:2rem 0;text-align:center;}
+.ayuda-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1px;margin-bottom:.8rem;color:var(--verde);}
+.ayuda-card p{font-size:.88rem;margin-bottom:1.2rem;}
+.btn-ayuda{display:inline-block;background:var(--verde);color:#000;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:.9rem;margin:0 .4rem .5rem;}
+.footer-legal{text-align:center;padding:2rem;border-top:1px solid var(--borde);color:var(--muy-suave);font-size:.8rem;margin-top:4rem;}
+.footer-legal a{color:var(--verde);text-decoration:none;}
+@media(max-width:600px){.test-grid,.limites-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">BetPro<span>Latam</span></a>
+    <a href="../index.html" class="nav-back">← Volver al inicio</a>
+  </div>
+</nav>
+<div class="container">
+  <span class="page-tag">🛡️ Importante</span>
+  <h1>Juego Responsable</h1>
+  <p class="fecha">BetProLatam promueve activamente el juego responsable y seguro</p>
+
+  <div class="alerta-box">
+    <h3>⚠️ Las apuestas deben ser entretenimiento, no una fuente de ingresos</h3>
+    <p>Si sientes que las apuestas están afectando tu vida personal, económica o familiar, busca ayuda de inmediato. No estás solo y hay recursos disponibles en Perú de forma gratuita.</p>
+  </div>
+
+  <h2>¿Qué es el Juego Responsable?</h2>
+  <p>El juego responsable significa apostar de forma <strong>controlada y consciente</strong>, como una actividad de entretenimiento con un presupuesto establecido previamente, sin afectar tus finanzas personales ni tus relaciones. Las apuestas deportivas nunca deben verse como una inversión ni como una solución a problemas económicos.</p>
+
+  <h2>Señales de Alerta — ¿Tienes un Problema?</h2>
+  <p>Responde honestamente: ¿identificas alguna de estas situaciones en tu vida?</p>
+  <div class="test-grid">
+    <div class="test-item">Apuestas más de lo que puedes permitirte perder</div>
+    <div class="test-item">Piensas en apostar constantemente durante el día</div>
+    <div class="test-item">Apuestas para recuperar dinero perdido anteriormente</div>
+    <div class="test-item">Ocultas tus apuestas a familia o amigos</div>
+    <div class="test-item">Has pedido dinero prestado para apostar</div>
+    <div class="test-item">Dejas de cumplir responsabilidades por apostar</div>
+    <div class="test-item">Te sientes irritable cuando no puedes apostar</div>
+    <div class="test-item">Has intentado dejar de apostar sin conseguirlo</div>
+  </div>
+  <p>Si marcas <strong>3 o más</strong>, te recomendamos buscar apoyo profesional cuanto antes.</p>
+
+  <h2>Herramientas de Control</h2>
+  <p>La mayoría de casas de apuestas ofrecen herramientas para controlar tu actividad. Úsalas activamente:</p>
+  <div class="limites-grid">
+    <div class="limite-card">
+      <span class="limite-icon">💰</span>
+      <div class="limite-title">Límite de Depósito</div>
+      <div class="limite-desc">Establece un tope diario, semanal o mensual de cuánto puedes depositar</div>
+    </div>
+    <div class="limite-card">
+      <span class="limite-icon">⏱️</span>
+      <div class="limite-title">Límite de Tiempo</div>
+      <div class="limite-desc">Recibe alertas cuando llevas cierto tiempo en la plataforma</div>
+    </div>
+    <div class="limite-card">
+      <span class="limite-icon">❄️</span>
+      <div class="limite-title">Auto-exclusión</div>
+      <div class="limite-desc">Bloquea tu cuenta por un período determinado (1 semana a permanente)</div>
+    </div>
+  </div>
+
+  <h2>Reglas Básicas para Apostar Bien</h2>
+  <ul>
+    <li><strong>Presupuesto fijo:</strong> define cuánto dinero puedes perder sin que afecte tu vida. Ese es tu límite mensual, sin excepciones.</li>
+    <li><strong>Regla del 2-5%:</strong> nunca apuestes más del 2-5% de tu bankroll en una sola apuesta.</li>
+    <li><strong>Apuestas y emociones no se mezclan:</strong> no apuestes enojado, triste, borracho ni bajo presión emocional.</li>
+    <li><strong>No persigas pérdidas:</strong> si perdiste, acepta y para. Apostar más para recuperar es el error más común.</li>
+    <li><strong>Tómate descansos:</strong> si llevas más de 2 horas apostando, haz una pausa obligatoria.</li>
+    <li><strong>El largo plazo importa:</strong> las casas siempre tienen ventaja matemática. Nadie gana consistentemente apostando sin estrategia.</li>
+    <li><strong>Separa el dinero:</strong> nunca uses dinero destinado a alimentación, alquiler, salud o educación para apostar.</li>
+  </ul>
+
+  <h2>Protege a los Menores</h2>
+  <p>Si tienes menores de edad en casa, te recomendamos activar controles parentales en tu dispositivo para evitar que accedan a sitios de apuestas. Puedes usar herramientas como <strong>Family Link (Google)</strong>, <strong>Screen Time (Apple)</strong> o extensiones de control parental en el navegador.</p>
+
+  <div class="ayuda-card">
+    <h3>¿Necesitas Ayuda?</h3>
+    <p>Si tú o alguien que conoces tiene un problema con el juego, estos recursos están disponibles de forma <strong>gratuita y confidencial</strong>:</p>
+    <a href="tel:113" class="btn-ayuda">📞 Línea 113 (MINSA Perú)</a>
+    <a href="https://www.gamblersanonymous.org" target="_blank" class="btn-ayuda">🌐 Gamblers Anonymous</a>
+    <div class="info-box" style="margin-top:1rem;text-align:left;">
+      <p>
+        📞 <strong>MINSA Perú — Salud Mental:</strong> 113 (gratuito, 24h)<br>
+        📞 <strong>CEM — Centro de Emergencia:</strong> 100<br>
+        🌐 <strong>Gamblers Anonymous:</strong> gamblersanonymous.org<br>
+        🌐 <strong>Jugadores Anónimos Latinoamérica:</strong> jugadoresanonimos.net<br>
+        📧 <strong>BetProLatam:</strong> ayuda@betprolatam.com
+      </p>
+    </div>
+  </div>
+
+  <h2>Nuestro Compromiso</h2>
+  <p>BetProLatam solo enlaza a casas de apuestas que ofrecen herramientas de juego responsable activas. Si detectamos que una casa no cumple con estándares mínimos de protección al usuario, la retiramos de nuestras comparativas inmediatamente.</p>
+  <p>Adicionalmente, todo el contenido de nuestro sitio incluye advertencias de edad y responsabilidad. Estamos comprometidos con un ecosistema de apuestas más seguro para toda Latinoamérica.</p>
+
+</div>
+<div class="footer-legal">
+  © 2025 BetProLatam ·
+  <a href="aviso-legal.html">Aviso Legal</a> ·
+  <a href="politica-privacidad.html">Privacidad</a> ·
+  <a href="sobre-nosotros.html">Sobre Nosotros</a>
+</div>
+</body>
+</html>
