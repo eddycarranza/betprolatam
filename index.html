@@ -320,21 +320,21 @@ footer{background:var(--fondo2);border-top:1px solid var(--borde);padding:3rem 2
         <span class="b-cta">Leer guía →</span>
         <span class="b-min">6 min de lectura</span>
       </a>
-      <a href="#" class="blog-card">
+      <a href="#" class="blog-card" onclick="abrirGuia('bankroll');return false;">
         <div class="bc">Estrategia</div>
         <h4>Bankroll Management: La regla del 2-5% que protege tu capital</h4>
         <p>Sin gestión de capital, ninguna estrategia funciona a largo plazo. Aprende a proteger tu bankroll desde el primer día.</p>
         <span class="b-cta">Leer artículo →</span>
         <span class="b-min">5 min de lectura</span>
       </a>
-      <a href="#" class="blog-card">
+      <a href="#" class="blog-card" onclick="abrirGuia('cuotas');return false;">
         <div class="bc">Principiantes</div>
         <h4>¿Cómo leer las cuotas? Decimales, americanas y fraccionales</h4>
         <p>Entiende todos los formatos de cuotas y aprende a calcular tus ganancias potenciales antes de confirmar cualquier apuesta.</p>
         <span class="b-cta">Leer artículo →</span>
         <span class="b-min">4 min de lectura</span>
       </a>
-      <a href="#" class="blog-card">
+      <a href="#" class="blog-card" onclick="abrirGuia('value-betting');return false;">
         <div class="bc">Estrategia</div>
         <h4>Value Betting: Cómo identificar cuotas con valor real</h4>
         <p>La clave para ganar a largo plazo no es acertar todo, sino apostar cuando la cuota ofrece más probabilidad de la que la casa estima.</p>
@@ -412,7 +412,7 @@ footer{background:var(--fondo2);border-top:1px solid var(--borde);padding:3rem 2
         <a href="#blog">Artículos y estrategia</a>
         <a href="#casas">Casas de apuestas Perú</a>
         <a href="legal/sobre-nosotros.html">Sobre BetProLatam</a>
-        <a href="mailto:contacto@betprolatam.com">Contacto</a>
+        <a href="mailto:betprolatam@gmail.com">Contacto</a>
       </div>
       <div class="f-col">
         <h4>Legal</h4>
@@ -433,7 +433,7 @@ footer{background:var(--fondo2);border-top:1px solid var(--borde);padding:3rem 2
   <div class="modal" id="modal-content"></div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const GUIAS = {
   '1x2':{titulo:'1X2 — Resultado Final',sub:'El mercado más popular del fútbol, explicado desde cero',contenido:`
     <div class="g-intro"><strong>¿Qué es el 1X2?</strong> Es la apuesta más básica. El <strong>1</strong> representa victoria local, la <strong>X</strong> el empate, y el <strong>2</strong> la victoria visitante. Solo eliges una opción y apuestas a que ocurra al final de los 90 minutos.</div>
@@ -511,6 +511,75 @@ const GUIAS = {
     <div class="g-p"><strong>Hándicap Europeo:</strong> 3 resultados · NO devuelve en empate ajustado · mayor riesgo · cuota más alta.<br><strong>Hándicap Asiático:</strong> 2 resultados · SÍ devuelve en empate ajustado · menor riesgo · cuota más baja.</div>
     <div class="tip"><div class="tip-lbl">💡 Cuándo usar Europeo vs Asiático</div><p>Usa el Europeo si confías en que el favorito ganará cómodamente por 2+ goles. Si no tienes tanta certeza, el Asiático es más seguro porque al menos te devuelve la apuesta si gana por exactamente 1.</p></div>`},
 
+  'bankroll':{titulo:'Bankroll Management',sub:'La regla del 2-5% que protege tu capital a largo plazo',contenido:`
+    <div class="g-intro"><strong>¿Qué es el Bankroll?</strong> Tu <strong>bankroll</strong> es el dinero que tienes destinado exclusivamente para apuestas. La gestión de bankroll es el conjunto de reglas que defines para <strong>nunca perder más de lo que puedes permitirte</strong> y mantenerte apostando a largo plazo.</div>
+    <div class="g-h3">La regla del 2-5%</div>
+    <div class="g-p">La regla más importante del bankroll management dice que <strong>nunca debes apostar más del 2-5% de tu bankroll total en una sola apuesta</strong>. Si tienes S/ 200 para apostar, cada apuesta individual debería ser de S/ 4 a S/ 10 máximo.</div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Ejemplo correcto — Regla del 2%</span><span class="ej-res rg">✓ Gestión sana</span></div><p><strong>Bankroll total: S/ 300</strong><br>Apuesta por partido: 2% = S/ 6<br>Aunque pierdas 10 seguidas, solo pierdes S/ 60 (20% del total).<br><strong>Sigues vivo para recuperar.</strong></p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Ejemplo incorrecto — Sin gestión</span><span class="ej-res rp">✗ Error común</span></div><p><strong>Bankroll total: S/ 300</strong><br>Apuesta por partido: S/ 100 (33%)<br>Con 3 apuestas perdidas seguidas → <strong>bankroll a cero.</strong><br>Y las rachas de 3 pérdidas seguidas ocurren todo el tiempo.</p></div>
+    </div>
+    <div class="g-h3">¿Por qué el 2-5% y no más?</div>
+    <div class="g-p">Incluso el mejor apostador del mundo pierde entre el 40-45% de sus apuestas. Las rachas negativas de 5-8 pérdidas seguidas son completamente normales estadísticamente. Con el 2%, una racha de 8 pérdidas seguidas solo te cuesta el 16% del bankroll — sigues en pie. Con el 20% por apuesta, una racha de 4 pérdidas te destruye.</div>
+    <div class="g-h3">Tipos de gestión de bankroll</div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta plana — La más recomendada</span><span class="ej-res rg">Para principiantes</span></div><p>Siempre apuestas el mismo monto fijo (ej: S/ 10 por apuesta), sin importar qué tan seguro te sientas. Simple, controlada y la más usada por apostadores serios.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">% fijo del bankroll</span><span class="ej-res rg">Intermedio</span></div><p>Siempre apuestas el 2% del bankroll actual. Si creces, apuestas un poco más. Si bajas, apuestas menos. Se adapta automáticamente a tu situación.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Martingala — EVÍTALA</span><span class="ej-res rp">✗ Peligrosa</span></div><p>Doblar la apuesta después de cada pérdida para "recuperar". Parece lógica pero con una racha de 6 pérdidas y apuesta inicial de S/ 10: necesitas apostar S/ 640 en la séptima. <strong>Destruye bankrolls rápidamente.</strong></p></div>
+    </div>
+    <div class="g-h3">Reglas básicas adicionales</div>
+    <div class="g-p">✅ <strong>Dinero separado:</strong> el bankroll nunca se mezcla con dinero de gastos del hogar, alimentación o alquiler.<br>✅ <strong>No persigas pérdidas:</strong> si pierdes S/ 50 en un día, no intentes recuperarlo ese mismo día apostando más.<br>✅ <strong>Lleva registro:</strong> anota cada apuesta (equipo, mercado, cuota, resultado). Sin datos no puedes mejorar.<br>✅ <strong>Límite diario:</strong> define cuánto puedes perder en un día y para cuando llegues a ese límite.</div>
+    <div class="tip"><div class="tip-lbl">💡 La verdad que nadie dice</div><p>El 95% de los apostadores pierde dinero a largo plazo. Los que sobreviven no son los que aciertan más — son los que <strong>gestionan mejor su capital</strong>. La disciplina vale más que el conocimiento de mercados.</p></div>`},
+
+  'cuotas':{titulo:'¿Cómo Leer las Cuotas?',sub:'Decimales, americanas y fraccionales explicadas desde cero',contenido:`
+    <div class="g-intro"><strong>¿Qué es una cuota?</strong> La cuota (también llamada momio u odd) es el <strong>número que multiplica tu apuesta</strong> si aciertas. También refleja la probabilidad que la casa asigna a cada resultado. Saber leerlas es lo primero que debes aprender.</div>
+    <div class="g-h3">Formato Decimal — El más usado en Perú y Europa</div>
+    <div class="g-p">Es el formato más sencillo. La cuota ya incluye tu apuesta dentro del resultado. <strong>Lo que cobras = apuesta × cuota.</strong></div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 2.00 — Apuesta S/ 100</span><span class="ej-res rg">✓ Cobras S/ 200</span></div><p>S/ 100 × 2.00 = S/ 200 en total → <strong>ganancia neta S/ 100</strong><br>Una cuota de 2.00 significa que la casa estima un 50% de probabilidad.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 1.50 — Apuesta S/ 100</span><span class="ej-res rg">✓ Cobras S/ 150</span></div><p>S/ 100 × 1.50 = S/ 150 en total → <strong>ganancia neta S/ 50</strong><br>Cuota baja = resultado muy probable según la casa.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 3.40 — Apuesta S/ 50</span><span class="ej-res rg">✓ Cobras S/ 170</span></div><p>S/ 50 × 3.40 = S/ 170 en total → <strong>ganancia neta S/ 120</strong><br>Cuota alta = resultado improbable según la casa.</p></div>
+    </div>
+    <div class="g-h3">Cuota decimal → Probabilidad implícita</div>
+    <div class="g-p">Puedes saber qué probabilidad le asigna la casa a cada resultado con esta fórmula simple:<br><strong>Probabilidad % = (1 ÷ cuota) × 100</strong></div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 1.40</span><span class="ej-res rd">Prob. implícita: 71%</span></div><p>1 ÷ 1.40 × 100 = <strong>71%</strong> — La casa cree que hay 71% de posibilidades de que ocurra.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 2.50</span><span class="ej-res rd">Prob. implícita: 40%</span></div><p>1 ÷ 2.50 × 100 = <strong>40%</strong> — La casa estima 40% de probabilidad.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Cuota 4.00</span><span class="ej-res rd">Prob. implícita: 25%</span></div><p>1 ÷ 4.00 × 100 = <strong>25%</strong> — Solo 1 de cada 4 veces debería ocurrir según la casa.</p></div>
+    </div>
+    <div class="g-h3">Formato Americano (Moneyline)</div>
+    <div class="g-p">Muy usado en EE.UU. y en algunas casas internacionales. Funciona con números positivos y negativos.</p>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">+150 (positivo = underdog)</span><span class="ej-res rg">Cobras S/ 150 de ganancia por S/ 100</span></div><p>Un +150 significa que por cada S/ 100 apostados, ganas S/ 150 de ganancia neta.<br>Total cobrado = S/ 250 (S/ 100 de apuesta + S/ 150 de ganancia).</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">-200 (negativo = favorito)</span><span class="ej-res rg">Necesitas apostar S/ 200 para ganar S/ 100</span></div><p>Un -200 significa que debes arriesgar S/ 200 para obtener S/ 100 de ganancia neta.<br>Total cobrado = S/ 300 (S/ 200 de apuesta + S/ 100 de ganancia).</p></div>
+    </div>
+    <div class="g-h3">Formato Fraccional</div>
+    <div class="g-p">Usado principalmente en Reino Unido. Se lee como fracción: <strong>ganancia / apuesta</strong>.</div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">3/1 (se lee "tres a uno")</span><span class="ej-res rg">Ganas S/ 3 por cada S/ 1 apostado</span></div><p>Apuestas S/ 100 → ganas S/ 300 de ganancia + recuperas S/ 100 → total S/ 400.<br>Equivale a cuota decimal 4.00.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">1/2 (se lee "uno a dos")</span><span class="ej-res rg">Ganas S/ 1 por cada S/ 2 apostados</span></div><p>Apuestas S/ 100 → ganas S/ 50 de ganancia + recuperas S/ 100 → total S/ 150.<br>Equivale a cuota decimal 1.50.</p></div>
+    </div>
+    <div class="tip"><div class="tip-lbl">💡 Conversión rápida al decimal</div><p>La mayoría de casas en Perú usan decimales. Si ves americano o fraccional, puedes cambiarlo en la configuración de la casa. El decimal es siempre el más fácil de calcular mentalmente.</p></div>`},
+
+  'value-betting':{titulo:'Value Betting',sub:'Cómo identificar cuotas con valor real y ganar a largo plazo',contenido:`
+    <div class="g-intro"><strong>¿Qué es el Value Betting?</strong> Una apuesta tiene <strong>valor (value)</strong> cuando la probabilidad real de que ocurra un resultado es <strong>mayor que la probabilidad implícita que ofrece la cuota</strong>. En otras palabras: la casa se equivocó y te está pagando más de lo que debería.</div>
+    <div class="g-h3">La fórmula del valor esperado</div>
+    <div class="g-p"><strong>Valor = (Probabilidad real × Cuota) - 1</strong><br>Si el resultado es positivo → hay valor. Si es negativo o cero → no hay valor.</div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta CON valor</span><span class="ej-res rg">✓ Apuesta recomendada</span></div><p><strong>Situación:</strong> Tú estimas que el local tiene 60% de probabilidad de ganar.<br>La casa ofrece cuota <strong>2.00</strong> (implica 50% según ellos).<br>Valor = (0.60 × 2.00) - 1 = <strong>+0.20 → hay 20% de valor positivo</strong><br>A largo plazo, estas apuestas son rentables.</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Apuesta SIN valor</span><span class="ej-res rp">✗ Evitar</span></div><p><strong>Situación:</strong> Tú estimas que el local tiene 50% de probabilidad de ganar.<br>La casa ofrece cuota <strong>1.70</strong> (implica 59% según ellos).<br>Valor = (0.50 × 1.70) - 1 = <strong>-0.15 → valor negativo</strong><br>A largo plazo, estas apuestas pierden dinero aunque aciertes la mitad.</p></div>
+    </div>
+    <div class="g-h3">¿Cómo estimas la probabilidad real?</div>
+    <div class="g-p">Aquí está la clave del value betting. Para estimar tu propia probabilidad necesitas analizar:</div>
+    <div class="ejs">
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Estadísticas recientes</span><span class="ej-res rd">Base del análisis</span></div><p>Últimos 5 partidos del equipo como local y visitante por separado. Promedio de goles marcados y encajados. Racha actual (victorias/derrotas consecutivas).</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Contexto del partido</span><span class="ej-res rd">Factor clave</span></div><p>¿Necesita ganar alguno de los dos? ¿Vienen de jugar entre semana? ¿Hay bajas importantes (portero, goleador titular)? ¿Es partido de vuelta con resultado del ida?</p></div>
+      <div class="ej"><div class="ej-h"><span class="ej-tipo">Comparar con otras casas</span><span class="ej-res rg">Truco práctico</span></div><p>Si una casa ofrece cuota 2.20 y todas las demás ofrecen 1.80 para el mismo resultado, esa casa puede estar dando valor. Usa comparadores de cuotas para detectarlo.</p></div>
+    </div>
+    <div class="g-h3">La verdad sobre el value betting</div>
+    <div class="g-p">El value betting <strong>no garantiza ganar cada apuesta</strong> — de hecho puedes perder muchas seguidas. Lo que garantiza es que, con suficientes apuestas con valor positivo, <strong>ganarás dinero a largo plazo</strong>. Por eso necesitas bankroll management sólido: aguantar las rachas negativas hasta que los números trabajen a tu favor.</p>
+    <div class="tip"><div class="tip-lbl">💡 Por dónde empezar</div><p>Empieza por mercados que conoces bien. Si ves Liga 1 Perú todos los fines de semana, tienes información que las casas no tienen — conoces el estado de ánimo del equipo, el rendimiento en casa con lluvia, o si el delantero titular realmente está en forma. Ese conocimiento local <strong>es tu ventaja real</strong>.</p></div>`},
+
   'en-vivo':{titulo:'Apuestas en Vivo (In-Play)',sub:'Cómo apostar durante el partido con ventaja real',contenido:`
     <div class="g-intro"><strong>¿Qué son?</strong> Apuestas que colocas <strong>mientras el partido está en curso</strong>. Las cuotas cambian en tiempo real según lo que pasa en el campo — goles, tarjetas, posesión, ocasiones. Es el mercado con más oportunidades de valor para quienes saben leer el juego.</div>
     <div class="g-h3">Situaciones con valor en vivo</div>
@@ -549,10 +618,4 @@ const obs=new IntersectionObserver(entries=>{
   });
 },{threshold:.07});
 document.querySelectorAll('.blog-card,.mercado-card,.why-card,.casa-item').forEach((el,i)=>{
-  el.style.opacity='0';el.style.transform='translateY(22px)';
-  el.style.transition=`opacity .5s ease ${i*.07}s,transform .5s ease ${i*.07}s`;
-  obs.observe(el);
-});
-</script>
-</body>
-</html>
+  el.style.opacity='0';el.style.trans
